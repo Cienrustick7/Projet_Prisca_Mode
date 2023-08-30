@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('depenses', function (Blueprint $table) {
             $table->id();
-            $table->int('libelle');
-            $table->float('montant');
-            $table->Date('Date');
-            $table->unsignedBigInteger('personnel_id')->unsigned();
-            $table->foreign('personnel_id')->references('id')->on('personnels')->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedBigInteger('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('libelle');
+            $table->Integer('montant');
+            $table->date('date');
+            $table->unsignedBigInteger('users_id')->unsigned();
+            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('personnels_id')->unsigned();
+            $table->foreign('personnels_id')->references('id')->on('personnels')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

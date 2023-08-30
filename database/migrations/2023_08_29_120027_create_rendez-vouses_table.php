@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('libelle');
             $table->date('date_rdv');
-            $table->unsignedBigInteger('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('users_id')->unsigned();
+            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('clients_id')->unsigned();
             $table->foreign('clients_id')->references('id')->on('clients')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nom_prenom');
             $table->string('adresse');
-            $table->int('telephone');
+            $table->integer('telephone');
             $table->string('type_personnel');
-            $table->unsignedBigInteger('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('users_id')->unsigned();
+            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
