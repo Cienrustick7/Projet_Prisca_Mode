@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('type_modele');
             $table->string('nom_modele');
-            $table->integer('image');
+            $table->Integer('image');
             $table->unsignedBigInteger('users_id')->unsigned();
             $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

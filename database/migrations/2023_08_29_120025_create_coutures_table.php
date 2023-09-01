@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('coutures', function (Blueprint $table) {
             $table->id();
-            $table->integer('montant');
+            $table->Integer('montant');
             $table->date('date_depot');
             $table->date('date_recuperation');
             $table->unsignedBigInteger('users_id')->unsigned();
