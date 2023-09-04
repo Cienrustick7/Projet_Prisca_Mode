@@ -13,14 +13,15 @@
     <div class="row">
         <div class="col-lg-2 bg-primary" style="height: 100vh;">
             <ul class="">
-                <li><span class="dropdown-item-text">Dropdown item text</span></li>
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                <li><span class="dropdown-item-text">Dropdown item text</span></li>
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <h1><span class="dropdown-item-text">MENU</span></h1>
+                <hr>
+                <li><a class="dropdown-item" href="#">CLIENTS</a></li>
+                <li><a class="dropdown-item" href="#">MODELES</a></li>
+                <li><a class="dropdown-item" href="#">MESURES</a></li>
+                <li><span class="dropdown-item-text">COUTURES</span></li>
+                <li><a class="dropdown-item" href="#">PAIEMENTS</a></li>
+                <li><a class="dropdown-item" href="#">PERSONNELS</a></li>
+
               </ul>
         </div>
 
