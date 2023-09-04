@@ -35,6 +35,20 @@ class ProfileController extends Controller
             'user' => $request->user(),
         ]);
     }
+
+    public function paiements(Request $request): View
+    {
+        return view('profile.clients', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function personnels(Request $request): View
+    {
+        return view('profile.personnels', [
+            'user' => $request->user(),
+        ]);
+    }
     /**
      * Update the user's profile information.
      */

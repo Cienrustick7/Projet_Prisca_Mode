@@ -23,6 +23,10 @@ Route::get('profile-clients', [ProfileController::class,'clients'])->name('clien
 
 Route::get('profile-Modeles', [ProfileController::class,'Modeles'])->name('Modeles');
 
+Route::get('profile-paiements', [ProfileController::class,'paiements'])->name('paiements');
+
+Route::get('profile-personnels', [ProfileController::class,'personnels'])->name('personnels');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
