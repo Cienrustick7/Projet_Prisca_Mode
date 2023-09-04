@@ -18,7 +18,7 @@
                 <li><a class="dropdown-item" href="{{ Route('clients') }}">CLIENTS</a></li>
                 <li><a class="dropdown-item" href="{{ Route('Modeles') }}">MODELES</a></li>
                 <li><a class="dropdown-item" href="#">MESURES</a></li>
-                <li><span class="dropdown-item-text">COUTURES</span></li>
+                <li><a class="dropdown-item-text">COUTURES</a></li>
                 <li><a class="dropdown-item" href="{{Route('paiements')}}">PAIEMENTS</a></li>
                 <li><a class="dropdown-item" href="{{Route('personnels')}}">PERSONNELS</a></li>
 

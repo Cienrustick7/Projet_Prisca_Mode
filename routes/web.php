@@ -16,12 +16,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+
+
+});Route::get('/', function () {
+    return view('welcome');
 });
 
 
 Route::get('profile-clients', [ProfileController::class,'clients'])->name('clients');
 
 Route::get('profile-Modeles', [ProfileController::class,'Modeles'])->name('Modeles');
+
+
+Route::get('profile-mesures', [ProfileController::class,'mesures'])->name('mesures');
+
+Route::get('profile-coutures', [ProfileController::class,'coutures'])->name('coutures');
 
 Route::get('profile-paiements', [ProfileController::class,'paiements'])->name('paiements');
 

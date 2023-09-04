@@ -9,11 +9,12 @@
 </head>
 <body>
 
-        @include('layouts.navbar')
+    <section class="container-fluid">
+    <div class="row">
+    @include('layouts.navbar')
+    </div>
+    </section>
 
-    
-
-
- @include('layouts.script')
+@include('layouts.script')
 </body>
 </html>

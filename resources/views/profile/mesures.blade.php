@@ -8,12 +8,13 @@
     <title>Document</title>
 </head>
 <body>
+<section class="container-fluid">
+<div class="row">
+@include('layouts.navbar')
 
-        @include('layouts.navbar')
+</div>
+</section>
+@include('layouts.script')
 
-    
-
-
- @include('layouts.script')
 </body>
 </html>
