@@ -15,6 +15,8 @@
      <div class="col-lg-10">
         <div class="container mt-3">
      <a href="" class="btn btn-danger">Nouveau+</a>
+       
+
         </div>
         <table class="table">
             <thead>
@@ -23,6 +25,7 @@
                 <th scope="col">First</th>
                 <th scope="col">Last</th>
                 <th scope="col">Handle</th>
+
               </tr>
             </thead>
             <tbody>

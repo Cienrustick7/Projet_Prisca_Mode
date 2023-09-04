@@ -28,12 +28,6 @@ class ProfileController extends Controller
         ]);
     }
 
-    public function mesures(Request $request): View
-    {
-        return view('profile.mesures', [
-            'user' => $request->user(),
-        ]);
-    }
 
     public function Modeles(Request $request): View
     {
@@ -42,9 +36,10 @@ class ProfileController extends Controller
         ]);
     }
 
-    public function paiements(Request $request): View
+
+    public function mesures(Request $request): View
     {
-        return view('profile.paiements', [
+        return view('profile.mesures', [
             'user' => $request->user(),
         ]);
     }
@@ -56,9 +51,9 @@ class ProfileController extends Controller
         ]);
     }
 
-    public function personnels(Request $request): View
+    public function Rendez_vous(Request $request): View
     {
-        return view('profile.personnels', [
+        return view('profile.Rendez_vous', [
             'user' => $request->user(),
         ]);
     }
