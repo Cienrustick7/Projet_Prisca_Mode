@@ -28,6 +28,12 @@ class ProfileController extends Controller
         ]);
     }
 
+    public function mesures(Request $request): View
+    {
+        return view('profile.mesures', [
+            'user' => $request->user(),
+        ]);
+    }
 
     public function Modeles(Request $request): View
     {
@@ -38,7 +44,14 @@ class ProfileController extends Controller
 
     public function paiements(Request $request): View
     {
-        return view('profile.clients', [
+        return view('profile.paiements', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function coutures(Request $request): View
+    {
+        return view('profile.coutures', [
             'user' => $request->user(),
         ]);
     }
