@@ -28,6 +28,14 @@ class ProfileController extends Controller
         ]);
     }
 
+
+    public function form_client(Request $request): View
+    {
+        return view('profile.ajout_client', [
+            'user' => $request->user(),
+        ]);
+    }
+
     public function mesures(Request $request): View
     {
         return view('profile.mesures', [

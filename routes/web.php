@@ -36,6 +36,8 @@ Route::get('profile-paiements', [ProfileController::class,'paiements'])->name('p
 
 Route::get('profile-personnels', [ProfileController::class,'personnels'])->name('personnels');
 
+Route::get('ajout-client', [ProfileController::class,'form_client'])->name('form_client');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
