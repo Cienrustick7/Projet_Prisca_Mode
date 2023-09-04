@@ -19,6 +19,9 @@ Route::get('/', function () {
 });
 
 
+Route::get('profile-clients', [ProfileController::class,'clients'])->name('clients');
+
+Route::get('profile-Modeles', [ProfileController::class,'Modeles'])->name('Modeles');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
