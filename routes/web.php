@@ -36,7 +36,11 @@ Route::get('profile-paiements', [ProfileController::class,'paiements'])->name('p
 
 Route::get('profile-personnels', [ProfileController::class,'personnels'])->name('personnels');
 
+<<<<<<< HEAD
 Route::get('profile-Rendez_vous', [ProfileController::class,'Rendez_vous'])->name('Rendez_vous');
+=======
+Route::get('ajout-client', [ProfileController::class,'form_client'])->name('form_client');
+>>>>>>> 0c06d1028982a8b0b8522f6cf2f255ea2189b202
 
 Route::get('/dashboard', function () {
     return view('dashboard');
