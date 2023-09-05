@@ -38,6 +38,7 @@ Route::get('profile-personnels', [ProfileController::class,'personnels'])->name(
 
 Route::get('ajout-client', [ProfileController::class,'form_client'])->name('form_client');
 
+Route::get('ajout-modele', [ProfileController::class,'form_modele'])->name('form_modele');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

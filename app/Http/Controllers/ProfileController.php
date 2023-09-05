@@ -50,6 +50,13 @@ class ProfileController extends Controller
         ]);
     }
 
+
+    public function form_modele(Request $request): View
+    {
+        return view('profile.ajout_modele', [
+            'user' => $request->user(),
+        ]);
+    }
     public function paiements(Request $request): View
     {
         return view('profile.paiements', [

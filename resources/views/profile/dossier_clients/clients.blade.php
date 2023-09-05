@@ -9,8 +9,8 @@
 </head>
 <body>
 
-    <section class="container-fluid">
-        <div class="row">
+<section class="container-fluid">
+   <div class="row">
      @include('layouts.navbar')
      <div class="col-lg-10">
         <div class="container mt-3">
