@@ -13,6 +13,8 @@
     <div class="row">
     @include('layouts.navbar')
     </div>
+
+    
     </section>
 
 @include('layouts.script')

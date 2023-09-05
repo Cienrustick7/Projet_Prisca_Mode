@@ -9,9 +9,17 @@
 </head>
 <body>
 
-        @include('layouts.navbar')
+    <section class="container-fluid">
+        <div class="row">
+     @include('layouts.navbar')
+     <div class="col-lg-10">
+        <div class="container mt-3">
+     <a href="" class="btn btn-danger">Nouveau+</a>
 
-    
+
+        </div>
+
+    </section>
 
 
  @include('layouts.script')
