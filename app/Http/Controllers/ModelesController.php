@@ -26,9 +26,9 @@ class ModelesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function form_modele(Request $request)
     {
-        //
+        return view('modele.ajout_modele');
     }
 
     /**

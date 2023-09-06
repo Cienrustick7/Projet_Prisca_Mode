@@ -33,7 +33,7 @@ Route::get('client.ajout_client', [ClientsController::class,'form_client'])->nam
 
 Route::get('modele.Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
 
-Route::get('modele.ajout-modele', [ModelesController::class,'form_modele'])->name('form_modele');
+Route::get('ajout_modele', [ModelesController::class,'form_modele'])->name('form_modele');
 
 Route::get('mesure.mesures', [MesuresController::class,'mesures'])->name('mesures');
 
