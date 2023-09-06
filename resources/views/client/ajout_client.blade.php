@@ -4,7 +4,7 @@
     <div class="col-lg-10">
 
         <div class="container mt-3">
-            <a href="{{ Route('clients') }}" class="btn btn-danger">Liste</a>
+            <a href="{{ Route('form_client') }}" class="btn btn-danger">Liste</a>
                </div>
                <form method="post" action="insertion_clients.php">
                 <section class="contenair p-2 bg-danger mt-3 m-3">

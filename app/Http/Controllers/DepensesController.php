@@ -20,7 +20,7 @@ class DepensesController extends Controller
      */
     public function depenses()
     {
-        return view('depenses');
+        return view('depense.depenses');
     }
 
     /**

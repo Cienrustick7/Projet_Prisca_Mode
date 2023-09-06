@@ -20,7 +20,7 @@ class CouturesController extends Controller
      */
     public function coutures()
     {
-        return view('coutures');
+        return view('couture.coutures');
     }
 
     /**

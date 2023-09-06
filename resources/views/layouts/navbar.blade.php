@@ -21,6 +21,7 @@
                 <li><a class="dropdown-item" href="{{ Route('coutures')}}">COUTURES</a></li>
                 <li><a class="dropdown-item" href="{{Route('paiements')}}">PAIEMENTS</a></li>
                 <li><a class="dropdown-item" href="{{Route('personnels')}}">PERSONNELS</a></li>
+                <li><a class="dropdown-item" href="{{Route('rendez_vous')}}">RENDEZ_VOUS</a></li>
 
               </ul>
         </div>

@@ -20,7 +20,7 @@ class PaiementsController extends Controller
      */
     public function paiements()
     {
-        return view('paiements');
+        return view('paiement.paiements');
     }
 
     /**

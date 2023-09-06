@@ -20,7 +20,7 @@ class MesuresController extends Controller
      */
     public function mesures()
     {
-        return view('mesures');
+        return view('mesure.mesures');
     }
 
     /**
