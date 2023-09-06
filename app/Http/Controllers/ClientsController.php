@@ -20,15 +20,15 @@ class ClientsController extends Controller
      */
     public function clients()
     {
-        return view('clients');
+        return view('client.clients');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function form_client(Request $request)
     {
-        //
+        return view('client.ajout_client');
     }
 
     /**
