@@ -20,7 +20,7 @@ class ModelesController extends Controller
      */
     public function Modeles()
     {
-        return view('Modeles');
+        return view('modele.Modeles');
     }
 
     /**

@@ -2,11 +2,13 @@
 
 use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\CouturesController;
+use App\Http\Controllers\MesuresController;
 use App\Http\Controllers\ModelesController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PaiementsController;
 use App\Http\Controllers\PersonnelsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Rendez_vousController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,26 +27,26 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PagesController::class,'index']);
 
 
-Route::get('clients', [ClientsController::class,'clients'])->name('clients');
+Route::get('client.clients', [ClientsController::class,'clients'])->name('clients');
 
-Route::get('ajout-client', [ClientsController::class,'form_client'])->name('form_client');
+Route::get('client.ajout_client', [ClientsController::class,'form_client'])->name('form_client');
 
-Route::get('Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
+Route::get('modele.Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
 
-Route::get('ajout-modele', [ModelesController::class,'form_modele'])->name('form_modele');
+Route::get('modele.ajout-modele', [ModelesController::class,'form_modele'])->name('form_modele');
 
-Route::get('mesures', [MesuresController::class,'mesures'])->name('mesures');
+Route::get('mesure.mesures', [MesuresController::class,'mesures'])->name('mesures');
 
-Route::get('coutures', [CouturesController::class,'coutures'])->name('coutures');
+Route::get('couture.coutures', [CouturesController::class,'coutures'])->name('coutures');
 
-Route::get('paiements', [PaiementsController::class,'paiements'])->name('paiements');
+Route::get('paiement.paiements', [PaiementsController::class,'paiements'])->name('paiements');
 
-Route::get('personnels', [PersonnelsController::class,'personnels'])->name('personnels');
+Route::get('personnel.personnels', [PersonnelsController::class,'personnels'])->name('personnels');
 
 Route::get('rendez_vous', [Rendez_vousControler::class,'rendez_vous'])->name('rendez_vous');
 
 
-
+Route::get('rv.rendez_vous', [Rendez_vousController::class,'rendez_vous'])->name('rendez_vous');
 
 
 

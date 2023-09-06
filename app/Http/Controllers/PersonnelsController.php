@@ -20,7 +20,7 @@ class PersonnelsController extends Controller
      */
     public function personnels()
     {
-        return view('personnels');
+        return view('personnel.personnels');
     }
 
     /**

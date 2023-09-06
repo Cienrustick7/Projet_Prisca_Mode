@@ -20,7 +20,7 @@ class Rendez_vousController extends Controller
      */
     public function rendez_vous()
     {
-        return view('rendez_vous');
+        return view('rv.rendez_vous');
     }
 
     /**
