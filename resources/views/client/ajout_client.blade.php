@@ -1,10 +1,20 @@
-@extends('layouts.mainlayout')
-
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @include('layouts.js')
+    <title>COUTURE PRISCA MODE</title>
+</head>
+<body>
+    <section class="container-fluid">
+        <div class="row">
+            @include('layouts.navbar')
     <div class="col-lg-10">
 
         <div class="container mt-3">
-            <a href="{{ Route('form_client') }}" class="btn btn-danger">Liste</a>
+            <a href="{{ Route('clients') }}" class="btn btn-danger">Liste</a>
                </div>
                <form method="post" action="insertion_clients.php">
                 <section class="contenair p-2 bg-danger mt-3 m-3">
@@ -48,4 +58,8 @@
     </form>
     </div>
 
-@endsection
+</section>
+
+
+</body>
+</html>

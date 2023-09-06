@@ -26,9 +26,9 @@ class CouturesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function form_couture(Request $request)
     {
-        //
+        return view('couture.ajout_couture');
     }
 
     /**
