@@ -31,6 +31,8 @@ Route::get('client.clients', [ClientsController::class,'clients'])->name('client
 
 Route::get('client.ajout_client', [ClientsController::class,'form_client'])->name('form_client');
 
+Route::get('client.ajout_client/traitement', [ClientsController::class,'form_client/traitement'])->name('form_client/traitement');
+
 Route::get('modele.Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
 
 Route::get('ajout_modele', [ModelesController::class,'form_modele'])->name('form_modele');

@@ -23,8 +23,7 @@
                     <div class="card" style="width: 14rem;">
                         <img src="{{ asset('img/images (7).jpeg') }}" alt="">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+                            <p class="card-text">des complets tuniques aux differents prix</p>
                         </div>
                     </div>
                 </div>

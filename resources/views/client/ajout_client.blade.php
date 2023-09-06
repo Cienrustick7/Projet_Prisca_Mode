@@ -13,10 +13,19 @@
             @include('layouts.navbar')
     <div class="col-lg-10">
 
+        @if(session('status'))
+        <div class="alert alert-succès">
+            {{ session('status') }}
+        </div>
+
+        @endif
+
         <div class="container mt-3">
             <a href="{{ Route('clients') }}" class="btn btn-danger">Liste</a>
                </div>
-               <form method="post" action="insertion_clients.php">
+               <form action="ajout.client/traitement" method="POST">
+
+                @csrf
                 <section class="contenair p-2 bg-danger mt-3 m-3">
                     <div class="row mt-3">
 

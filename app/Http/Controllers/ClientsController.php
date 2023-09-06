@@ -29,6 +29,7 @@ class ClientsController extends Controller
     public function form_client(Request $request)
     {
         return view('client.ajout_client');
+
     }
 
     /**
