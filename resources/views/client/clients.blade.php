@@ -14,16 +14,18 @@
      @include('layouts.navbar')
      <div class="col-lg-10">
         <div class="container mt-3">
-     <a href="{{ Route('form_client') }}" class="btn btn-danger">Nouveau+</a>
+     <a href="" class="btn btn-danger">Nouveau+</a>
+
+
         </div>
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">id</th>
-                <th scope="col">Nom_Prenom</th>
-                <th scope="col">Adresse</th>
-                <th scope="col">Telephone</th>
-                <th scope="col">Sexe</th>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+
               </tr>
             </thead>
             <tbody>

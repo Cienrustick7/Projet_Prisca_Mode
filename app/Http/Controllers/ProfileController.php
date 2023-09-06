@@ -21,7 +21,12 @@ class ProfileController extends Controller
         ]);
     }
 
-    
+    public function clients(Request $request): View
+    {
+        return view('profile.clients', [
+            'user' => $request->user(),
+        ]);
+    }
 
 
     public function form_client(Request $request): View

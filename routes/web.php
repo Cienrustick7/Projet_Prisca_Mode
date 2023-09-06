@@ -45,6 +45,9 @@ Route::get('paiement.paiements', [PaiementsController::class,'paiements'])->name
 
 Route::get('personnel.personnels', [PersonnelsController::class,'personnels'])->name('personnels');
 
+Route::get('rendez_vous', [Rendez_vousControler::class,'rendez_vous'])->name('rendez_vous');
+
+
 Route::get('rv.rendez_vous', [Rendez_vousController::class,'rendez_vous'])->name('rendez_vous');
 
 
