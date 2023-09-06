@@ -10,7 +10,7 @@ class DepensesController extends Controller
     /**
      * Show the profile for a given user.
      */
-    public function show(string $id): View
+    public function depenses(string $id): View
     {
         return view('depenses.depenses', [
             'depenses' => depenses::findOrFail($id)

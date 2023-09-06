@@ -23,20 +23,23 @@ Route::get('/', function () {
 });
 
 
-Route::get('profile-clients', [ProfileController::class,'clients'])->name('clients');
+Route::get('client.clients', [clientscontroller::class,'clients'])->name('clents');
 
-Route::get('profile-Modeles', [ProfileController::class,'Modeles'])->name('Modeles');
+Route::get('modele-Modeles', [modelsController::class,'Modeles'])->name('Modeles');
 
 
-Route::get('profile-mesures', [ProfileController::class,'mesures'])->name('mesures');
+Route::get('mesure-mesures', [MesuresController::class,'mesures'])->name('mesures');
 
-Route::get('profile-coutures', [ProfileController::class,'coutures'])->name('coutures');
+Route::get('couture-coutures', [CouturesController::class,'coutures'])->name('coutures');
 
-Route::get('profile-paiements', [ProfileController::class,'paiements'])->name('paiements');
+Route::get('views-paiements', [paiementsController::class,'paiements'])->name('paiements');
 
-Route::get('profile-personnels', [ProfileController::class,'personnels'])->name('personnels');
+Route::get('views-personnels', [personnelsController::class,'personnels'])->name('personnels');
 
-Route::get('profile-Rendez_vous', [ProfileController::class,'Rendez_vous'])->name('Rendez_vous');
+Route::get('views-Rendez_vous', [rendez_vousController::class,'Rendez_vous'])->name('Rendez_vous');
+
+Route::get('ajout-modele', [ModelsController::class,'form_modele'])->name('form_modele');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

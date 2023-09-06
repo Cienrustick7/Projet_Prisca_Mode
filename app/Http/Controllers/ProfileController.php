@@ -21,42 +21,7 @@ class ProfileController extends Controller
         ]);
     }
 
-    public function clients(Request $request): View
-    {
-        return view('profile.clients', [
-            'user' => $request->user(),
-        ]);
-    }
-
-
-    public function Modeles(Request $request): View
-    {
-        return view('profile.Modeles', [
-            'user' => $request->user(),
-        ]);
-    }
-
-
-    public function mesures(Request $request): View
-    {
-        return view('profile.mesures', [
-            'user' => $request->user(),
-        ]);
-    }
-
-    public function coutures(Request $request): View
-    {
-        return view('profile.coutures', [
-            'user' => $request->user(),
-        ]);
-    }
-
-    public function Rendez_vous(Request $request): View
-    {
-        return view('profile.Rendez_vous', [
-            'user' => $request->user(),
-        ]);
-    }
+    
     /**
      * Update the user's profile information.
      */

@@ -9,7 +9,7 @@ class ClientsController extends Controller
     /**
      * Show the profile for a given user.
      */
-    public function show(string $id): View
+    public function Clients(string $id): View
     {
         return view('Clients.Clients', [
             'Clients' => Clients::findOrFail($id)

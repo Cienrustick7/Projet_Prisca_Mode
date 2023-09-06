@@ -10,7 +10,7 @@ class CouturesController extends Controller
     /**
      * Show the profile for a given user.
      */
-    public function show(string $id): View
+    public function coutures(string $id): View
     {
         return view('coutures.coutures', [
             'coutures' => coutures::findOrFail($id)

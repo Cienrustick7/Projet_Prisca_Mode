@@ -9,7 +9,7 @@ class ModelsController extends Controller
     /**
      * Show the profile for a given user.
      */
-    public function show(string $id): View
+    public function modeles(string $id): View
     {
         return view('Models.Models', [
             'Models' => Models::findOrFail($id)
