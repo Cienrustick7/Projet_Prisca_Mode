@@ -11,7 +11,7 @@
 </section>
 
 
-        <div class="col-lg-2 bg-primary" style="height: 100vh;">
+        <div class="col-lg-2 bg-primary" style="height: 80vh;">
             <ul class="">
                 <h1><span class="dropdown-item-text">MENU</span></h1>
                 <hr>

@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\CouturesController;
+use App\Http\Controllers\ModelesController;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PaiementsController;
+use App\Http\Controllers\PersonnelsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,31 +20,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
 
 
-});Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PagesController::class,'index']);
 
 
-Route::get('profile-clients', [ProfileController::class,'clients'])->name('clients');
+Route::get('clients', [ClientsController::class,'clients'])->name('clients');
 
-Route::get('profile-Modeles', [ProfileController::class,'Modeles'])->name('Modeles');
+Route::get('ajout-client', [ClientsController::class,'form_client'])->name('form_client');
+
+Route::get('Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
+
+Route::get('ajout-modele', [ModelesController::class,'form_modele'])->name('form_modele');
+
+Route::get('mesures', [MesuresController::class,'mesures'])->name('mesures');
+
+Route::get('coutures', [CouturesController::class,'coutures'])->name('coutures');
+
+Route::get('paiements', [PaiementsController::class,'paiements'])->name('paiements');
+
+Route::get('personnels', [PersonnelsController::class,'personnels'])->name('personnels');
 
 
-Route::get('profile-mesures', [ProfileController::class,'mesures'])->name('mesures');
 
-Route::get('profile-coutures', [ProfileController::class,'coutures'])->name('coutures');
 
-Route::get('profile-paiements', [ProfileController::class,'paiements'])->name('paiements');
 
-Route::get('profile-personnels', [ProfileController::class,'personnels'])->name('personnels');
-
-Route::get('ajout-client', [ProfileController::class,'form_client'])->name('form_client');
-
-Route::get('ajout-modele', [ProfileController::class,'form_modele'])->name('form_modele');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
