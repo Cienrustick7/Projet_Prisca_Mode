@@ -39,11 +39,16 @@ Route::get('mesure.mesures', [MesuresController::class,'mesures'])->name('mesure
 
 Route::get('couture.coutures', [CouturesController::class,'coutures'])->name('coutures');
 
+Route::get('couture.ajout-couture', [CouturesController::class,'form_couture'])->name('form_couture');
+
 Route::get('paiement.paiements', [PaiementsController::class,'paiements'])->name('paiements');
 
 Route::get('personnel.personnels', [PersonnelsController::class,'personnels'])->name('personnels');
 
 Route::get('rv.rendez_vous', [Rendez_vouscontroller::class,'rendez_vous'])->name('rendez_vous');
+
+
+
 
 
 
