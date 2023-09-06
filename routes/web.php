@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\CouturesController;
+use App\Http\Controllers\ModelesController;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PaiementsController;
+use App\Http\Controllers\PersonnelsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,31 +20,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
 
 
-});Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PagesController::class,'index']);
 
 
-Route::get('client.clients', [clientscontroller::class,'clients'])->name('clents');
+Route::get('clients', [ClientsController::class,'clients'])->name('clients');
 
-Route::get('modele-Modeles', [modelsController::class,'Modeles'])->name('Modeles');
+Route::get('ajout-client', [ClientsController::class,'form_client'])->name('form_client');
+
+Route::get('Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
+
+Route::get('ajout-modele', [ModelesController::class,'form_modele'])->name('form_modele');
+
+Route::get('mesures', [MesuresController::class,'mesures'])->name('mesures');
+
+Route::get('coutures', [CouturesController::class,'coutures'])->name('coutures');
+
+Route::get('paiements', [PaiementsController::class,'paiements'])->name('paiements');
+
+Route::get('personnels', [PersonnelsController::class,'personnels'])->name('personnels');
+
+Route::get('rendez_vous', [Rendez_vousControler::class,'rendez_vous'])->name('rendez_vous');
 
 
-Route::get('mesure-mesures', [MesuresController::class,'mesures'])->name('mesures');
 
-Route::get('couture-coutures', [CouturesController::class,'coutures'])->name('coutures');
 
-Route::get('views-paiements', [paiementsController::class,'paiements'])->name('paiements');
-
-Route::get('views-personnels', [personnelsController::class,'personnels'])->name('personnels');
-
-Route::get('views-Rendez_vous', [rendez_vousController::class,'Rendez_vous'])->name('Rendez_vous');
-
-Route::get('ajout-modele', [ModelsController::class,'form_modele'])->name('form_modele');
 
 
 Route::get('/dashboard', function () {

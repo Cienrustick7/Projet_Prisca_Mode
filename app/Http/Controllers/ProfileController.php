@@ -21,7 +21,62 @@ class ProfileController extends Controller
         ]);
     }
 
-    
+    public function clients(Request $request): View
+    {
+        return view('profile.clients', [
+            'user' => $request->user(),
+        ]);
+    }
+
+
+    public function form_client(Request $request): View
+    {
+        return view('profile.ajout_client', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function mesures(Request $request): View
+    {
+        return view('profile.mesures', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function Modeles(Request $request): View
+    {
+        return view('profile.Modeles', [
+            'user' => $request->user(),
+        ]);
+    }
+
+
+    public function form_modele(Request $request): View
+    {
+        return view('profile.ajout_modele', [
+            'user' => $request->user(),
+        ]);
+    }
+    public function paiements(Request $request): View
+    {
+        return view('profile.paiements', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function coutures(Request $request): View
+    {
+        return view('profile.coutures', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function personnels(Request $request): View
+    {
+        return view('profile.personnels', [
+            'user' => $request->user(),
+        ]);
+    }
     /**
      * Update the user's profile information.
      */
