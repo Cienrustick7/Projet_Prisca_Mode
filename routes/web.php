@@ -7,8 +7,8 @@ use App\Http\Controllers\ModelesController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PaiementsController;
 use App\Http\Controllers\PersonnelsController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Rendez_vousController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,10 +43,7 @@ Route::get('paiement.paiements', [PaiementsController::class,'paiements'])->name
 
 Route::get('personnel.personnels', [PersonnelsController::class,'personnels'])->name('personnels');
 
-Route::get('rendez_vous', [Rendez_vousControler::class,'rendez_vous'])->name('rendez_vous');
-
-
-Route::get('rv.rendez_vous', [Rendez_vousController::class,'rendez_vous'])->name('rendez_vous');
+Route::get('rv.rendez_vous', [Rendez_vouscontroller::class,'rendez_vous'])->name('rendez_vous');
 
 
 
