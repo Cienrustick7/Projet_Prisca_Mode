@@ -13,7 +13,7 @@
             @include('layouts.navbar')
     <div class="col-lg-10">
 
-        <h1 style="text-align: center">Formulaire</h1>
+        <h1 style="text-align: center">Formulaire de couture</h1>
                <form>
                 @csrf
                 <section class="contenair p-2 bg-danger mt-3 m-3">
@@ -49,7 +49,7 @@
                 <div class="col-lg-10">
 
                     <div class="container mt-3">
-                        <a href="{{ Route('coutures') }}" class="btn btn-danger">Enregistre</a>
+                        <a href="{{ Route('coutures') }}" class="btn btn-danger">ajouter la couture</a>
                            </div>
     </form>
     </div>
