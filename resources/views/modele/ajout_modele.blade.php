@@ -15,50 +15,88 @@
             @include('layouts.navbar')
 
             <div class="col-lg-10">
-
-                <div class="container mt-3">
-                    <a href="{{ Route('Modeles') }}" class="btn btn-danger">Liste</a>
+                <h1 class="text-center">Nouveau modeles</h1>
+                <div class="container mt-2" style="width: 20%">
+                    <a href="{{ Route('form_modele') }}" class="btn btn-danger">Ajouter</a>
                 </div>
-                <form method="post" action="insertion_clients.php">
-                    <section class="contenair p-2 bg-danger mt-3 m-3">
-                        <div class="row mt-3">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <div class="col">
+                          <div class="card m-3" style="width: 36%; height:15px">
+                            <img src="{{asset('img/images (3).jpeg')}}" alt="...">
+                            <div class="card-body">
 
-                            <div class="row mt-3">
-                                <div class="col-lg-6">
-                                    <input type="text" name="nom" class="form-control" placeholder="nom">
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" name="prenom" class="form-control" placeholder="prenom">
-                                </div>
+                              <p class="card-text">Ensemble femme chic 20000FCFA</p>
                             </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card m-3" style="width: 40%">
+                            <img src="{{asset('img/image de mode couture 3.jpg')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
 
-                            <div class="row mt-3">
-                                <div class="col-lg-6">
-                                    <input type="text" name="adresse" class="form-control" placeholder="adresse">
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" name="telephone" class="form-control" placeholder="telephone">
-                                </div>
+                              <p class="card-text">ensemble pagne complet femme 10000FCFA</p>
                             </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card m-5" style="width: 40%">
+                            <img src="{{asset('img/image model couture veste enfant.webp')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
 
-                            <div class="row mt-1">
-                                <div class="col-lg-6">
-                                    <label class="text-danger" for="" required>utilisateur</label>
-                                    <select class="form-control" name="user">
-                                        <option value="">choisissez un user...</option>
-                                    </select>
-                                </div>
+                              <p class="card-text">ensemble veste enfant 15000FCFA</p>
                             </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                            <div class="card m-3" style="width: 40%">
+                              <img src="{{asset('img/tailleur_pantalon_femme_ceremonie 5.jpg')}}" class="card-img-top" alt="...">
+                              <div class="card-body">
 
-                            <div class="row m-3">
-                                <div class="col-6">
-                                    <div class="col-auto">
-                                        <button type="submit" class="btn btn-dark text-light mb-2">Ajouter</button>
-                                    </div>
-                                </div>
+                                <p class="card-text">complet veste femme 40000FCFA</p>
+                              </div>
                             </div>
-                    </section>
-                </form>
+                          </div>
+                          <div class="col">
+                            <div class="card m-3" style="width: 30%">
+                              <img src="{{asset('img/images (9).jpeg')}}" class="card-img-top" alt="...">
+                              <div class="card-body">
+
+                                <p class="card-text">ensemble bazin 30000FCFA</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="card m-3" style="width: 30%">
+                              <img src="{{asset('img/ensemble-costume-3-pieces-pour-homme-veste-blazer.webp')}}" class="card-img-top" alt="...">
+                              <div class="card-body">
+
+                                <p class="card-text">ensemble costume trois pieces 150000FCFA</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col">
+                            <div class="card m-3" style="width: 30%">
+                              <img src="{{asset('img/image couture 5.jpeg 4.jpg')}}" class="card-img-top" alt="...">
+                              <div class="card-body">
+
+                                <p class="card-text">ensemble dentelle femme 30000FCFA</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col">
+                            <div class="card m-3" style="width: 40%">
+                              <img src="{{asset('img/costume homme.jpg')}}" class="card-img-top" alt="...">
+                              <div class="card-body">
+
+                                <p class="card-text"> ensemble veste homme 200000FCFA</p>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                </div>
             </div>
     </section>
     @include('layouts.script')
