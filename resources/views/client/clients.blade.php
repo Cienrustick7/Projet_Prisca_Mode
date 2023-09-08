@@ -21,10 +21,11 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">id</th>
+                <th scope="col">Nom_Prenom</th>
+                <th scope="col">Adresse</th>
+                <th scope="col">Telephone</th>
+                <th scope="col">Sexe</th>
 
               </tr>
             </thead>
