@@ -31,9 +31,11 @@ Route::get('client.clients', [ClientsController::class,'clients'])->name('client
 
 Route::get('client.ajout_client', [ClientsController::class,'form_client'])->name('form_client');
 
+Route::post('ajouter_traitement', [ClientsController::class,'ajouter_client_traitement']);
+
 Route::get('modele.Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
 
-Route::get('modele.ajout-modele', [ModelesController::class,'form_modele'])->name('form_modele');
+Route::get('ajout_modele', [ModelesController::class,'form_modele'])->name('form_modele');
 
 Route::get('mesure.mesures', [MesuresController::class,'mesures'])->name('mesures');
 

@@ -7,7 +7,9 @@
 <body>
     <section class="container-fluid">
         <div class="row">
-@include('layouts.navbar')
+    <section class="container-fluid">
+        <div class="row">
+      @include('layouts.navbar')
 
 <div class="col-lg-10 mt-3">
     <h1 class="text-center">RENDEZ_VOUS</h1>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     @include('layouts.js')
     <title>COUTURES PRISCA MODE</title>
 </head>
+
 <body>
     <section class="container-fluid">
         <div class="row">
-@include('layouts.navbar')
+            @include('layouts.navbar')
 
 <div class="col-lg-10">
     <h1 class="text-center">Liste des modeles</h1>
@@ -63,4 +65,5 @@
 </section>
     @include('layouts.script')
 </body>
+
 </html>
