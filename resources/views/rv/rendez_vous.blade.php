@@ -5,9 +5,14 @@
     <title>Document</title>
 </head>
 <body>
-@include('layouts.navbar')
+    <section class="container-fluid">
+        <div class="row">
+      @include('layouts.navbar')
 
 
+    </div>
+    @include('layouts.footer')
+   </section>
 @include('layouts.script')
 </body>
 </html>

@@ -119,6 +119,6 @@
 
 </section>
 
-
+@include('layouts.script')
 </body>
 </html>

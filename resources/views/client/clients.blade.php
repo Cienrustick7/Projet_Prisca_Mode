@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @include('layouts.js')
-    <title>Document</title>
+    <title>COUTURE PRISCA MODE</title>
 </head>
 
 <body>
@@ -15,11 +15,9 @@
    <div class="row">
      @include('layouts.navbar')
      <div class="col-lg-10">
-        <div class="container mt-3">
-     <a href="" class="btn btn-danger">Nouveau+</a>
-
-
-        </div>
+     <div class="container mt-3">
+         <a href="{{ route('form_client') }}" class="btn btn-danger">Nouveau+</a>
+     </div>
         <table class="table">
             <thead>
               <tr>
@@ -83,6 +81,7 @@
 
      </div>
     </div>
+
     </section>
 
 

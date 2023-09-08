@@ -44,6 +44,7 @@
 </div>
 
 </div>
+
 </section>
 @include('layouts.script')
 

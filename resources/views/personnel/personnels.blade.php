@@ -13,6 +13,7 @@
         @include('layouts.navbar')
 
      </div>
+    
     </section>
 
 

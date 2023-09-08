@@ -27,6 +27,7 @@
                         </div>
                     </div>
                 </div>
+            
     </section>
     @include('layouts.script')
 </body>

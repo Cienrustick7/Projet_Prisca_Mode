@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Clients;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -24,11 +24,34 @@ class ClientsController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Show the form for creating a new resource.
      */
-    public function form_client(Request $request)
+    public function form_client()
     {
         return view('client.ajout_client');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function ajouter_client_traitement (Request $request)
+    {
+        $request->validate([
+            'nom_prenom' => 'required',
+            'adresse' => 'required',
+            'telephone' => 'required',
+            'sexe' => 'required',
+
+        ]);
+
+        $clients = new Clients();
+        $clients->nom_prenom = $request->nom_prenom;
+        $clients->adresse = $request->adresse;
+        $clients->telephone = $request->telephone;
+        $clients->sexe = $request->sexe;
+        $clients->save();
+
+        return redirect('ajout_client')->with('status', 'le client a bien été ajouter avec succès');
 
     }
 
