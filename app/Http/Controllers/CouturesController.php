@@ -29,6 +29,7 @@ class CouturesController extends Controller
     public function form_couture(Request $request)
     {
         return view('couture.ajout_couture');
+
     }
 
     /**
