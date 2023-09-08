@@ -17,12 +17,22 @@
     <div class="container mt-2" style="width: 20%">
         <a href="{{ Route('form_modele') }}" class="btn btn-danger">Nouveau+</a>
     </div>
-    <div class="container">
-        <div class="card" style="width: 14rem;">
-            <img src="{{ asset('img/images (7).jpeg') }}" alt="">
-               <div class="card-body">
-               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="container mt-3">
+        <div class="card" style="width: 25%">
+            <img src="{{asset('img/images (1).jpeg')}}" class="card rounded float-start" alt="...">
+            <div>
+                <p class="card-body">ensemble tunique à 35000</p>
+            </div>
         </div>
+
+    <img src="{{asset('img/images (2).jpeg')}}" class="card rounded float-end m-4" alt="...">
+    <div>
+        <p class="card-body">ensemble tunique à 35000</p>
+    </div>
+
+    <img src="{{asset('img/images (2).jpeg')}}" class="card rounded float-end " alt="...">
+
+
     </div>
 </div>
 
