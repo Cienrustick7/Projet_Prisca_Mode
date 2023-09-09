@@ -23,7 +23,7 @@
                 <th scope="col">id</th>
                 <th scope="col">Montant</th>
                 <th scope="col">Date_depot</th>
-                <th scope="col">Date_retrait</th>
+                <th scope="col">Date_recuperation</th>
                 <th scope="col">Modeles</th>
                 <th scope="col">clients</th>
               </tr>

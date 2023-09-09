@@ -22,6 +22,7 @@ class ClientsController extends Controller
     {
         return view('client.clients');
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -51,7 +52,7 @@ class ClientsController extends Controller
         $clients->sexe = $request->sexe;
         $clients->save();
 
-        return redirect('ajout_client')->with('status', 'le client a bien été ajouter avec succès');
+        return redirect()->route('form_client')->with('status', 'le client a bien été ajouter avec succès');
 
     }
 

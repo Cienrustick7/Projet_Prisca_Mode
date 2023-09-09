@@ -27,27 +27,29 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PagesController::class,'index']);
 
 
-Route::get('client.clients', [ClientsController::class,'clients'])->name('clients');
+Route::get('clients', [ClientsController::class,'clients'])->name('clients');
 
-Route::get('client.ajout_client', [ClientsController::class,'form_client'])->name('form_client');
+Route::get('ajout_client', [ClientsController::class,'form_client'])->name('form_client');
 
 Route::post('ajouter_traitement', [ClientsController::class,'ajouter_client_traitement']);
 
-Route::get('modele.Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
+Route::get('Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
 
 Route::get('ajout_modele', [ModelesController::class,'form_modele'])->name('form_modele');
 
-Route::get('mesure.mesures', [MesuresController::class,'mesures'])->name('mesures');
+Route::get('mesures', [MesuresController::class,'mesures'])->name('mesures');
 
-Route::get('couture.coutures', [CouturesController::class,'coutures'])->name('coutures');
+Route::get('coutures', [CouturesController::class,'coutures'])->name('coutures');
 
-Route::get('couture.ajout-couture', [CouturesController::class,'form_couture'])->name('form_couture');
+Route::get('ajout-couture', [CouturesController::class,'form_couture'])->name('form_couture');
 
-Route::get('paiement.paiements', [PaiementsController::class,'paiements'])->name('paiements');
+Route::post('enregistrement_couture', [CouturesController::class,'ajouter_couture'])->name('ajouter_couture');
 
-Route::get('personnel.personnels', [PersonnelsController::class,'personnels'])->name('personnels');
+Route::get('paiements', [PaiementsController::class,'paiements'])->name('paiements');
 
-Route::get('rv.rendez_vous', [Rendez_vouscontroller::class,'rendez_vous'])->name('rendez_vous');
+Route::get('personnels', [PersonnelsController::class,'personnels'])->name('personnels');
+
+Route::get('rendez_vous', [Rendez_vouscontroller::class,'rendez_vous'])->name('rendez_vous');
 
 
 
