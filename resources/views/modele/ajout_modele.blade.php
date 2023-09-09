@@ -16,87 +16,29 @@
 
             <div class="col-lg-10">
                 <h1 class="text-center">Nouveau modeles</h1>
-                <div class="container mt-2" style="width: 20%">
-                    <a href="{{ Route('form_modele') }}" class="btn btn-danger">Ajouter</a>
 
+                <div class="container p-2 bg-danger m-1">
+                    <form class="row g-3">
+                        <div class="col-md-5 text-light">
+                          <label for="inputType_modele" class="form-label">type_modele</label>
+                          <input type="text" class="form-control" id="inputType_modele">
+                        </div>
+                        <div class="col-md-5 text-light">
+                          <label for="inputNom_modele" class="form-label">nom_modele</label>
+                          <input type="text" class="form-control" id="inputAdresse">
+                        </div>
+                        <div class="col-md-5 text-light">
+                          <label for="inputImage" class="form-label">image</label>
+                          <input type="file" class="form-control" id="inputImage">
+                        </div>
+
+                        <div
+
+                        <div class="col-12">
+                          <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        </div>
+                      </form>
                 </div>
-                <div class="container">
-                    <div class="row row-cols-1 row-cols-md-2 g-4">
-                        <div class="col">
-                          <div class="card m-3" style="width: 36%; height:15px">
-                            <img src="{{asset('img/images (3).jpeg')}}" alt="...">
-                            <div class="card-body">
-
-                              <p class="card-text">Ensemble femme chic 20000FCFA</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="card m-3" style="width: 40%">
-                            <img src="{{asset('img/image de mode couture 3.jpg')}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-
-                              <p class="card-text">ensemble pagne complet femme 10000FCFA</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="card m-5" style="width: 40%">
-                            <img src="{{asset('img/image model couture veste enfant.webp')}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-
-                              <p class="card-text">ensemble veste enfant 15000FCFA</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                            <div class="card m-3" style="width: 40%">
-                              <img src="{{asset('img/tailleur_pantalon_femme_ceremonie 5.jpg')}}" class="card-img-top" alt="...">
-                              <div class="card-body">
-
-                                <p class="card-text">complet veste femme 40000FCFA</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="card m-3" style="width: 30%">
-                              <img src="{{asset('img/images (9).jpeg')}}" class="card-img-top" alt="...">
-                              <div class="card-body">
-
-                                <p class="card-text">ensemble bazin 30000FCFA</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="card m-3" style="width: 30%">
-                              <img src="{{asset('img/ensemble-costume-3-pieces-pour-homme-veste-blazer.webp')}}" class="card-img-top" alt="...">
-                              <div class="card-body">
-
-                                <p class="card-text">ensemble costume trois pieces 150000FCFA</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col">
-                            <div class="card m-3" style="width: 30%">
-                              <img src="{{asset('img/image couture 5.jpeg 4.jpg')}}" class="card-img-top" alt="...">
-                              <div class="card-body">
-
-                                <p class="card-text">ensemble dentelle femme 30000FCFA</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col">
-                            <div class="card m-3" style="width: 40%">
-                              <img src="{{asset('img/costume homme.jpg')}}" class="card-img-top" alt="...">
-                              <div class="card-body">
-
-                                <p class="card-text"> ensemble veste homme 200000FCFA</p>
-                              </div>
-                            </div>
-                          </div>
-                      </div>
                 </div>
             </div>
     </section>

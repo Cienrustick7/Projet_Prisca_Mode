@@ -45,6 +45,10 @@ Route::get('couture.ajout-couture', [CouturesController::class,'form_couture'])-
 
 Route::get('paiement.paiements', [PaiementsController::class,'paiements'])->name('paiements');
 
+Route::get('ajout_paiment', [PaiementsController::class,'form_paiement'])->name('form_paiment');
+
+Route::post('enregistrement_paiement', [PaiementsController::class,'ajout_paiement']);
+
 Route::get('personnel.personnels', [PersonnelsController::class,'personnels'])->name('personnels');
 
 Route::get('rv.rendez_vous', [Rendez_vouscontroller::class,'rendez_vous'])->name('rendez_vous');
