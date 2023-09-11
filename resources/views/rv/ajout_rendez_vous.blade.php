@@ -22,10 +22,10 @@
                 @endif
 
                 <div class="container mt-3">
-                    <a href="{{ Route('clients') }}" class="btn btn-danger">Liste</a>
+                    <a href="{{ Route('rendez_vous') }}" class="btn btn-danger">Liste</a>
                 </div>
                 <div class="text-center">
-                    <h1>Formulaire d'ajout client</h1>
+                    <h1>Formulaire d'ajout rendez_vous</h1>
                 </div>
                 <hr>
 
@@ -36,23 +36,19 @@
                         <div class="row mt-3">
 
                             <div class="row mt-3">
-                                <div class="col-lg-6">
-                                    <input type="text" name="nom_prenom" class="form-control"
-                                        placeholder="nom_prenom">
+                                <div class="col-lg-4">
+                                    <input type="text" name="libelle" class="form-control"
+                                        placeholder="libelle">
                                 </div>
-                                <div class="col-lg-6">
-                                    <input type="text" name="adresse" class="form-control" placeholder="adresse">
+                                <div class="col-lg-4">
+                                    <input type="date" name="date_rendez_vous" class="form-control" placeholder="date_rendez_vous">
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type="text" name="clients_id" class="form-control" placeholder="clients_id">
                                 </div>
                             </div>
 
-                            <div class="row mt-3">
-                                <div class="col-lg-6">
-                                    <input type="text" name="telephone" class="form-control" placeholder="telephone">
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" name="sexe" class="form-control" placeholder="sexe">
-                                </div>
-                            </div>
+
 
 
                             <div class="row m-3">

@@ -12,34 +12,58 @@
         <div class="row">
 @include('layouts.navbar')
 
-<div class="col-lg-10 mt-3">
-    <h1 class="text-center">LISTE DES PERSONNELS</h1>
-    <div class="container p-2 bg-danger m-1">
-        <form class="row g-3">
-            <div class="col-md-5 text-light">
-              <label for="inputNom_Prenom" class="form-label">Nom_Prenom</label>
-              <input type="text" class="form-control" id="inputNom_Prenom">
-            </div>
-            <div class="col-md-5 text-light">
-              <label for="inputAdresse" class="form-label">Adresse</label>
-              <input type="text" class="form-control" id="inputAdresse">
-            </div>
-            <div class="col-md-5 text-light">
-              <label for="inputTelephone" class="form-label">Telephone</label>
-              <input type="text" class="form-control" id="inputTelephone">
-            </div>
-            <div class="col-md-5 text-light">
-              <label for="inputType_personnel" class="form-label">Type_personnel</label>
-              <input type="texte" class="form-control" id="inputType_personnel">
-            </div>
-            <div
+<div class="col-lg-10">
+    <div class="container mt-3">
+ <a href="{{ Route('form_personnel') }}" class="btn btn-danger">Nouveau+</a>
+    </div>
+    <h1 style="text-align: center">Liste des personnels</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nom_Prenom</th>
+            <th scope="col">adresse</th>
+            <th scope="col">Telephone</th>
+            <th scope="col">type_personnel</th>
 
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary">Enregistrer</button>
-            </div>
-          </form>
-    </div>
-    </div>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Sankara_Louis</td>
+            <td>Kouritenga</td>
+            <td>70589633</td>
+            <td>couturier</td>
+
+          </tr>
+
+          <tr>
+            <th scope="row">2</th>
+            <td>Umuhoza_Athanasia</td>
+            <td>ouaga2000</td>
+            <td>65154897</td>
+            <td>comptable</td>
+
+          </tr>
+
+
+          <tr>
+            <th scope="row">3</th>
+            <td>Hirwa_Noelly</td>
+            <td>karpala</td>
+            <td>63258010</td>
+            <td>Couturiere</td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+ </div>
+</div>
+<div class="mt-6">
+
 </div>
 
 </section>

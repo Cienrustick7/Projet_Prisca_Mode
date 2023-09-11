@@ -12,7 +12,7 @@
         <div class="row">
             @include('layouts.navbar')
     <div class="col-lg-10">
-
+        <a href="{{ Route('mesures') }}"></a>
         <div class="container mt-3" style="text-align: center">
             <h1>LISTE DES MESURES </h1>
                </div>
@@ -109,6 +109,14 @@
                             <label for="inputHauteur_totale" class="form-label">Hauteur_totale</label>
                             <input type="number" class="form-control" id="number">
                           </div>
+                          <div class="col-md-3">
+                            <label for="clients_id" class="form-label">clients_id</label>
+                            <input type="number" class="form-control" id="number">
+                          </div>
+                          <div class="col-md-3">
+                            <label for="modeles_id" class="form-label">modeles_id</label>
+                            <input type="number" class="form-control" id="number">
+                          </div>
                         </div>
                 </section>
                 <div>
@@ -119,6 +127,6 @@
 
 </section>
 
-
+@include('layouts.script')
 </body>
 </html>

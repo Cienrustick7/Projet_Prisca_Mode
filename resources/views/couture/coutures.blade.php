@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @include('layouts.js')
-    <title>Document</title>
+    <title>COUTURE PRISCA MODE</title>
 </head>
 <body>
 
@@ -23,9 +23,9 @@
                 <th scope="col">id</th>
                 <th scope="col">Montant</th>
                 <th scope="col">Date_depot</th>
-                <th scope="col">Date_retrait</th>
-                <th scope="col">Modeles</th>
-                <th scope="col">clients</th>
+                <th scope="col">Date_recuperation</th>
+                <th scope="col">id_modeles</th>
+                <th scope="col">clients_id</th>
               </tr>
             </thead>
             <tbody>
@@ -34,8 +34,8 @@
                 <td>10000FCFA</td>
                 <td>08/09/2023</td>
                 <td>15/09/2023</td>
-                <td>Robe_courte</td>
-                <td>Ineza_Sonia</td>
+                <td>4</td>
+                <td>6</td>
               </tr>
 
               <tr>
@@ -43,8 +43,8 @@
                 <td>60000FCFA</td>
                 <td>01/09/2023</td>
                 <td>15/09/2023</td>
-                <td>Ensemble_veste</td>
-                <td>Uwimana_Claude</td>
+                <td>1</td>
+                <td>5</td>
               </tr>
 
 
@@ -53,8 +53,8 @@
                 <td>45000FCFA</td>
                 <td>04/09/2023</td>
                 <td>18/09/2023</td>
-                <td>Robe bazzin</td>
-                <td>Congo_Latifa</td>
+                <td>3</td>
+                <td>2</td>
               </tr>
 
             </tbody>
@@ -62,8 +62,11 @@
 
      </div>
     </div>
+    <div class="mt-6">
 
-    
+
+    </div>
+
     </section>
 
 

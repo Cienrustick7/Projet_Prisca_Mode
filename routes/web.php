@@ -31,9 +31,11 @@ Route::get('client.clients', [ClientsController::class,'clients'])->name('client
 
 Route::get('client.ajout_client', [ClientsController::class,'form_client'])->name('form_client');
 
+Route::post('ajouter_traitement', [ClientsController::class,'ajouter_client_traitement']);
+
 Route::get('modele.Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
 
-Route::get('modele.ajout-modele', [ModelesController::class,'form_modele'])->name('form_modele');
+Route::get('ajout_modele', [ModelesController::class,'form_modele'])->name('form_modele');
 
 Route::get('mesure.mesures', [MesuresController::class,'mesures'])->name('mesures');
 
@@ -41,11 +43,22 @@ Route::get('couture.coutures', [CouturesController::class,'coutures'])->name('co
 
 Route::get('couture.ajout-couture', [CouturesController::class,'form_couture'])->name('form_couture');
 
+Route::post('enregistrement_couture', [CouturesController::class,'enregistrement_couture']);
+
 Route::get('paiement.paiements', [PaiementsController::class,'paiements'])->name('paiements');
 
 Route::get('personnel.personnels', [PersonnelsController::class,'personnels'])->name('personnels');
 
+Route::get('ajout_personnel', [PersonnelsController::class,'form_personnel'])->name('form_personnel');
+
+Route::post('enregistrement_personnel', [PersonnelsController::class,'enregistrement_personnel']);
+
 Route::get('rv.rendez_vous', [Rendez_vouscontroller::class,'rendez_vous'])->name('rendez_vous');
+
+Route::get('rv.ajout_rendez_vous', [Rendez_vousController::class,'form_rendez_vous'])->name('form_rendez_vous');
+
+Route::post('ajouter_traitement', [Rendez_vousController::class,'ajouter_rendez_vous_traitement']);
+
 
 
 
