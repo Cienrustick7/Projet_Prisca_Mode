@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Models\Paiements;
 class PaiementsController extends Controller
 {
     /**
@@ -23,12 +23,38 @@ class PaiementsController extends Controller
         return view('paiement.paiements');
     }
 
+
+
+     /**
+     * Show the form for creating a new resource.
+     */
+    public function form_paiement()
+    {
+        return view('paiement.form_paiement');
+    }
+
+
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function ajout_paiement(Request $request)
     {
-        //
+        $request->validate([
+            'montant_payer' => 'required',
+            'avance' => 'required',
+            'reste' => 'required',
+            'date_paiement' => 'required',
+
+        ]);
+
+        $paiements = new Paiements();
+        $paiements->montant_paiement = $request->montant_paiement;
+        $paiements->avance = $request->avance;
+        $paiements->reste = $request->reste;
+        $paiements->date_paiement = $request->date_paiement;
+        $paiements->save();
+
+        return redirect()->route ('form_paiement')->with('status', 'le paiement a bien été ajouter avec succès');
     }
 
     /**
