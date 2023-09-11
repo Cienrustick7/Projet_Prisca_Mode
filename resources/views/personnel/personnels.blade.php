@@ -14,32 +14,48 @@
 
 <div class="col-lg-10 mt-3">
     <h1 class="text-center">LISTE DES PERSONNELS</h1>
-    <div class="container p-2 bg-danger m-1">
-        <form class="row g-3">
-            <div class="col-md-5 text-light">
-              <label for="inputNom_Prenom" class="form-label">Nom_Prenom</label>
-              <input type="text" class="form-control" id="inputNom_Prenom">
-            </div>
-            <div class="col-md-5 text-light">
-              <label for="inputAdresse" class="form-label">Adresse</label>
-              <input type="text" class="form-control" id="inputAdresse">
-            </div>
-            <div class="col-md-5 text-light">
-              <label for="inputTelephone" class="form-label">Telephone</label>
-              <input type="text" class="form-control" id="inputTelephone">
-            </div>
-            <div class="col-md-5 text-light">
-              <label for="inputType_personnel" class="form-label">Type_personnel</label>
-              <input type="texte" class="form-control" id="inputType_personnel">
-            </div>
-            <div
+    <div class="container">
+        <a href="{{ Route('form_personnel') }}" class="btn btn-danger">Nouveau+</a>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">nom_prenom</th>
+            <th scope="col">adresse</th>
+            <th scope="col">telephone</th>
+            <th scope="col">type_personnel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Joyeuse sarah</td>
+            <td>Goughin</td>
+            <td>54287624</td>
+            <td>comptable</td>
+          </tr>
 
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary">Enregistrer</button>
-            </div>
-          </form>
-    </div>
-    </div>
+          <tr>
+            <th scope="row">2</th>
+            <td>Stevie</td>
+            <td>zone1</td>
+            <td>5245852</td>
+            <td>chef d'achat</td>
+          </tr>
+
+
+          <tr>
+            <th scope="row">3</th>
+            <td>Marayo</td>
+            <td>Wemtenga</td>
+            <td>54006250</td>
+            <td>Couturier</td>
+          </tr>
+
+        </tbody>
+      </table>
+
 </div>
 
 </section>

@@ -27,33 +27,35 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PagesController::class,'index']);
 
 
-Route::get('client.clients', [ClientsController::class,'clients'])->name('clients');
+Route::get('clients', [ClientsController::class,'clients'])->name('clients');
 
-Route::get('client.ajout_client', [ClientsController::class,'form_client'])->name('form_client');
+Route::get('ajout_client', [ClientsController::class,'form_client'])->name('form_client');
 
 Route::post('ajouter_traitement', [ClientsController::class,'ajouter_client_traitement']);
 
-Route::get('modele.Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
+Route::get('Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
 
 Route::get('ajout_modele', [ModelesController::class,'form_modele'])->name('form_modele');
 
-Route::post('enregistrement_modele', [ModelesController::class,'ajouter_modele'])->name('ajouter_modele');
+Route::get('mesures', [MesuresController::class,'mesures'])->name('mesures');
 
-Route::get('mesure.mesures', [MesuresController::class,'mesures'])->name('mesures');
+Route::get('coutures', [CouturesController::class,'coutures'])->name('coutures');
 
-Route::get('couture.coutures', [CouturesController::class,'coutures'])->name('coutures');
+Route::get('ajout-couture', [CouturesController::class,'form_couture'])->name('form_couture');
 
-Route::get('couture.ajout-couture', [CouturesController::class,'form_couture'])->name('form_couture');
+Route::get('paiements', [PaiementsController::class,'paiements'])->name('paiements');
 
-Route::get('paiement.paiements', [PaiementsController::class,'paiements'])->name('paiements');
-
-Route::get('ajout_paiment', [PaiementsController::class,'form_paiement'])->name('form_paiment');
+Route::get('ajout_paiment', [PaiementsController::class,'form_paiement'])->name('form_paiement');
 
 Route::post('enregistrement_paiement', [PaiementsController::class,'ajout_paiement']);
 
-Route::get('personnel.personnels', [PersonnelsController::class,'personnels'])->name('personnels');
+Route::get('ajout_personnel', [PersonnelsController::class,'form_personnel'])->name('form_personnel');
 
-Route::get('rv.rendez_vous', [Rendez_vouscontroller::class,'rendez_vous'])->name('rendez_vous');
+Route::post('enregistrement_personnel', [PersonnelsController::class,'ajouter_personnel']);
+
+Route::get('personnels', [PersonnelsController::class,'personnels'])->name('personnels');
+
+Route::get('rendez_vous', [Rendez_vouscontroller::class,'rendez_vous'])->name('rendez_vous');
 
 
 

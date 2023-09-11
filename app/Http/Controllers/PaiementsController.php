@@ -21,7 +21,9 @@ class PaiementsController extends Controller
     public function paiements()
     {
         return view('paiement.paiements');
+
     }
+
 
 
 
@@ -30,7 +32,7 @@ class PaiementsController extends Controller
      */
     public function form_paiement()
     {
-        return view('paiement.form_paiement');
+        return view('paiement.ajout_paiement');
     }
 
 
@@ -44,6 +46,7 @@ class PaiementsController extends Controller
             'avance' => 'required',
             'reste' => 'required',
             'date_paiement' => 'required',
+            'coutures_id'  => 'required',
 
         ]);
 
@@ -52,6 +55,7 @@ class PaiementsController extends Controller
         $paiements->avance = $request->avance;
         $paiements->reste = $request->reste;
         $paiements->date_paiement = $request->date_paiement;
+        $paiements->coutures_id = $request->coutures_id;
         $paiements->save();
 
         return redirect()->route ('form_paiement')->with('status', 'le paiement a bien été ajouter avec succès');

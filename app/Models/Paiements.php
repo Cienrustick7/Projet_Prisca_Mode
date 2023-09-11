@@ -14,5 +14,6 @@ class Paiements extends Model
         'avance',
         'reste',
         'date_paiement',
+        'coutures_id',
     ];
 }
