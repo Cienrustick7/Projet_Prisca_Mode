@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Personnels;
 use Illuminate\Http\Request;
-
 class PersonnelsController extends Controller
 {
     /**
@@ -23,12 +23,38 @@ class PersonnelsController extends Controller
         return view('personnel.personnels');
     }
 
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function form_personnel()
+    {
+        return view('personnel.ajout_personnel');
+    }
+
+
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function ajouter_personnel(Request $request)
     {
-        //
+        $request->validate([
+            'nom_prenom' => 'required',
+            'adresse' => 'required',
+            'telephone' => 'required',
+            'type_personnel' => 'required',
+
+        ]);
+
+        $personnels = new Personnels();
+        $personnels->nom_prenom = $request->nom_prenom;
+        $personnels->adresse = $request->adresse;
+        $personnels->telephone = $request->telephone;
+        $personnels->type_personnel = $request->type_personnel;
+        $personnels->save();
+
+        return redirect()->route('form_personnel')->with('status', 'le personnel a bien été ajouter avec succès');
+
     }
 
     /**

@@ -19,10 +19,13 @@ class ClientsController extends Controller
      * Show the form for creating a new resource.
      */
     public function clients()
+
     {
-        return view('client.clients');
+        $clients = Clients::all();
+
+        return view('client.clients', compact('clients'));
     }
-    
+
 
     /**
      * Show the form for creating a new resource.

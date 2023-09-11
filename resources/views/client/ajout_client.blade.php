@@ -21,6 +21,8 @@
                     </div>
                 @endif
 
+            
+
                 <div class="container mt-3">
                     <a href="{{ Route('clients') }}" class="btn btn-danger">Liste</a>
                 </div>
@@ -28,7 +30,7 @@
                     <h1>Formulaire d'ajout client</h1>
                 </div>
                 <hr>
-               
+
 
                 <form action="ajouter_traitement" method="POST" class="form-group">
 

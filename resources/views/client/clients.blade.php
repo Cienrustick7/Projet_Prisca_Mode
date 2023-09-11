@@ -76,7 +76,16 @@
                 <td>60235698</td>
                 <td>masculin</td>
               </tr>
+              @foreach ($clients as $cli)
+              <tr>
+                  <td>{{ $cli->id }}</td>
+                  <td>{{ $cli->nom_prenom }}</td>
+                  <td>{{ $cli->adresse }}</td>
+                  <td>{{ $cli->telephone }}</td>
+                  <td>{{ $cli->sexe }}</td>
 
+              </tr>
+          @endforeach
             </tbody>
           </table>
 
