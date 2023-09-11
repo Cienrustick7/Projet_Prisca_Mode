@@ -15,10 +15,21 @@
             @include('layouts.navbar')
 
             <div class="col-lg-10">
+              <div>
                 <h1 class="text-center">Nouveau modeles</h1>
+                </div>
+
+                @if (session('status'))
+                <div class="alert alert-succès">
+                    {{ session('status') }}
+                </div>
+            @endif
+            <hr>
 
                 <div class="container p-2 bg-danger m-1">
+
                     <form class="row g-3">
+                        @csrf
                         <div class="col-md-5 text-light">
                           <label for="inputType_modele" class="form-label">type_modele</label>
                           <input type="text" class="form-control" id="inputType_modele">

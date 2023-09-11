@@ -37,6 +37,8 @@ Route::get('modele.Modeles', [ModelesController::class,'Modeles'])->name('Modele
 
 Route::get('ajout_modele', [ModelesController::class,'form_modele'])->name('form_modele');
 
+Route::post('enregistrement_modele', [ModelesController::class,'ajouter_modele'])->name('ajouter_modele');
+
 Route::get('mesure.mesures', [MesuresController::class,'mesures'])->name('mesures');
 
 Route::get('couture.coutures', [CouturesController::class,'coutures'])->name('coutures');

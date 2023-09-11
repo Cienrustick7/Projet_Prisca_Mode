@@ -28,11 +28,6 @@
                     <h1>Formulaire d'ajout client</h1>
                 </div>
                 <hr>
-                @if (session('status'))
-                    <div class="alert alert-success">
-                        {(session('status'))}
-                    </div>
-                @endif
 
                 <form action="ajouter_traitement" method="POST" class="form-group">
 

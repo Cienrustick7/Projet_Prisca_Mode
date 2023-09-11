@@ -31,6 +31,26 @@ class ModelesController extends Controller
         return view('modele.ajout_modele');
     }
 
+     /**
+     * Store a newly created resource in storage.
+     */
+    public function ajouter_modele(Request $request)
+    {
+        $request->validate([
+            'type_modele' => 'required',
+            'nom_modele' => 'required',
+            'image' => 'required',
+
+        ]);
+
+        $modeles = new Modeles();
+        $modeles->type_modeles = $request->type_modeles;
+        $modeles->nom_modeles = $request->nom_modeles;
+        $modeles->image = $request->image;
+        $clients->save();
+
+        return redirect('ajout_modele')->with('status', 'le modele a bien été ajouter avec succès');
+    }
     /**
      * Display the specified resource.
      */
