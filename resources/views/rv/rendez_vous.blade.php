@@ -17,23 +17,24 @@
      <div class="col-lg-10">
      <div class="container mt-3">
          <a href="{{ route('form_rendez_vous') }}" class="btn btn-danger">Nouveau+</a>
+         <h1 style="text-align: center">liste rendez_vous</h1>
      </div>
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">id</th>
+
                 <th scope="col">libelle</th>
                 <th scope="col">date_rendez_vous</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
+
                 <td>recuperation_veste</td>
                 <td>15/08/2023</td>
               </tr>
 
-              <th scope="row">1</th>
+
                 <td>essaie_robe_marie</td>
                 <td>15/08/2023</td>
               </tr>
