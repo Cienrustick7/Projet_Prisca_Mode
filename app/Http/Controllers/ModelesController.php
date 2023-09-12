@@ -48,7 +48,7 @@ class ModelesController extends Controller
         $modeles = new Modeles();
         $modeles->type_modele = $request->type_modele;
         $modeles->nom_modele = $request->nom_modele;
-        $modeles->image = $request->image;
+        $modeles->image = $request->image->store('photo', 'public');
         $modeles->save();
 
         return redirect('form_modele')->with('status', 'le modele a bien été ajouter avec succès');

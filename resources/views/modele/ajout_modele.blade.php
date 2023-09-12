@@ -28,7 +28,7 @@
 
                 <div class="container p-2 bg-danger m-1">
 
-                    <form action="enregistrement_modele" method="POST" class="row g-3 form-group">
+                    <form action="enregistrement_modele" method="POST" class="row g-3 form-group" enctype="multipart/form-data">
                         @csrf
                         <section class="contenair p-2 bg-danger mt-3 m-3">
                             <div class="row mt-3">
