@@ -15,28 +15,51 @@
             @include('layouts.navbar')
 
             <div class="col-lg-10">
+              <div>
                 <h1 class="text-center">Nouveau modeles</h1>
+                </div>
+
+                @if (session('status'))
+                <div class="alert alert-succès">
+                    {{ session('status') }}
+                </div>
+            @endif
+            <hr>
 
                 <div class="container p-2 bg-danger m-1">
-                    <form class="row g-3">
-                        <div class="col-md-5 text-light">
-                          <label for="inputType_modele" class="form-label">type_modele</label>
-                          <input type="text" class="form-control" id="inputType_modele">
-                        </div>
-                        <div class="col-md-5 text-light">
-                          <label for="inputNom_modele" class="form-label">nom_modele</label>
-                          <input type="text" class="form-control" id="inputAdresse">
-                        </div>
-                        <div class="col-md-5 text-light">
-                          <label for="inputImage" class="form-label">image</label>
-                          <input type="file" class="form-control" id="inputImage">
-                        </div>
 
-                        
+                    <form action="enregistrement_modele" method="POST" class="row g-3 form-group">
+                        @csrf
+                        <section class="contenair p-2 bg-danger mt-3 m-3">
+                            <div class="row mt-3">
 
-                        <div class="col-12">
-                          <button type="submit" class="btn btn-primary">Enregistrer</button>
-                        </div>
+                                <div class="row mt-3">
+                                    <div class="col-lg-6">
+                                        <input type="text" name="type_modele" class="form-control"
+                                            placeholder="type_modele">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" name="nom_modele" class="form-control" placeholder="nom_modele">
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-lg-6">
+                                        <input type="file" name="image" class="form-control" placeholder="image">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row m-3">
+                                    <div class="col-6">
+                                        <div class="col-auto">
+                                            <button type="submit"  class="btn btn-dark text-light mb-2">ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </section>
+
                       </form>
                 </div>
                 </div>

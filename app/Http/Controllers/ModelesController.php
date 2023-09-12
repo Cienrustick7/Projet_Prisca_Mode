@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Modeles;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -19,8 +19,10 @@ class ModelesController extends Controller
      * Show the form for creating a new resource.
      */
     public function Modeles()
+
     {
-        return view('modele.Modeles');
+        $modeles = Modeles::all();
+        return view('modele.Modeles', compact('modeles'));
     }
 
     /**
@@ -31,6 +33,26 @@ class ModelesController extends Controller
         return view('modele.ajout_modele');
     }
 
+     /**
+     * Store a newly created resource in storage.
+     */
+    public function ajouter_modele(Request $request)
+    {
+        $request->validate([
+            'type_modele' => 'required',
+            'nom_modele' => 'required',
+            'image' => 'required',
+
+        ]);
+
+        $modeles = new Modeles();
+        $modeles->type_modele = $request->type_modele;
+        $modeles->nom_modele = $request->nom_modele;
+        $modeles->image = $request->image;
+        $modeles->save();
+
+        return redirect('form_modele')->with('status', 'le modele a bien été ajouter avec succès');
+    }
     /**
      * Display the specified resource.
      */
