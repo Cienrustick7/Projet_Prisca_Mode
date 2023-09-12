@@ -52,6 +52,15 @@
 
           </div>
 
+          @foreach ($modeles as $mod)
+          <tr>
+              <td>{{ $mod->id }}</td>
+              <td>{{ $mod->type_modele }}</td>
+              <td>{{ $mod->nom_modele }}</td>
+              <td>{{ $mod->image }}</td>
+          </tr>
+      @endforeach
+
 </div>
 
 </section>
