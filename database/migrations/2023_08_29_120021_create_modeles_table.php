@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('type_modele');
             $table->string('nom_modele');
-            $table->Integer('image');
+            $table->string('image');
             $table->timestamps();
         });
     }
