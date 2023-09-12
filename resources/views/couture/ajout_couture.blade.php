@@ -19,7 +19,7 @@
       </div>
 
         @if (session('status'))
-        <div class="alert alert-succès">  
+        <div class="alert alert-succès">
             {{ session('status') }}
         </div>
     @endif
@@ -49,7 +49,7 @@
                             <div class="col-lg-6">
                                 <input type="text" name="nom_model" class="form-control" placeholder="nom_modele">
 
-                                <select class="champ" name="Idclients">
+                                <select class="champ" name="Idmodeles">
 
                                     <option>Selectionner un modele</option>;
 

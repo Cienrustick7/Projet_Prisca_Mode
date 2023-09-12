@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Paiements;
+use App\Models\Coutures;
 class PaiementsController extends Controller
 {
     /**
@@ -32,7 +33,9 @@ class PaiementsController extends Controller
      */
     public function form_paiement()
     {
-        return view('paiement.ajout_paiement');
+        $coutures = Coutures::all();
+
+        return view('paiement.ajout_paiement', compact('coutures'));
     }
 
 
