@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @include('layouts.js')
-    <title>Document</title>
+    <title>COUTURE PRISCA MODE</title>
 </head>
 <body>
 
@@ -21,43 +21,24 @@
             <thead>
               <tr>
                 <th scope="col">id</th>
-                <th scope="col">Montant</th>
+                <th scope="col">libelle</th>
                 <th scope="col">Date_depot</th>
                 <th scope="col">Date_recuperation</th>
-                <th scope="col">Modeles</th>
-                <th scope="col">clients</th>
+                <th scope="col">modeles_id</th>
+                <th scope="col">clients_id</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>10000FCFA</td>
-                <td>08/09/2023</td>
-                <td>15/09/2023</td>
-                <td>Robe_courte</td>
-                <td>Ineza_Sonia</td>
-              </tr>
+            @foreach ($coutures as $cout )
+            <tr>
+                <td>{{ $cout->id}}</td>
+                <td>{{ $cout->libelle}}</td>
+                <td>{{ $cout->Date_depot}}</td>
+                <td>{{ $cout->Date_recuperation}}</td>
+                <td>{{ $cout->modeles_id}}</td>
+                <td>{{ $cout->clients_id}}</td>
+            </tr>
 
-              <tr>
-                <th scope="row">2</th>
-                <td>60000FCFA</td>
-                <td>01/09/2023</td>
-                <td>15/09/2023</td>
-                <td>Ensemble_veste</td>
-                <td>Uwimana_Claude</td>
-              </tr>
-
-
-              <tr>
-                <th scope="row">3</th>
-                <td>45000FCFA</td>
-                <td>04/09/2023</td>
-                <td>18/09/2023</td>
-                <td>Robe bazzin</td>
-                <td>Congo_Latifa</td>
-              </tr>
-
-            </tbody>
+            @endforeach
           </table>
 
      </div>

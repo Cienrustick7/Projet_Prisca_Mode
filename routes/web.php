@@ -41,9 +41,15 @@ Route::post('enregistrement_modele', [ModelesController::class,'ajouter_modele']
 
 Route::get('mesures', [MesuresController::class,'mesures'])->name('mesures');
 
+Route::get('ajout-mesure', [MesuresController::class,'form_mesure'])->name('form_mesure');
+
+Route::post('enregistrement_mesure', [MesuresController::class,'enregistrement_mesure']);
+
 Route::get('coutures', [CouturesController::class,'coutures'])->name('coutures');
 
 Route::get('ajout-couture', [CouturesController::class,'form_couture'])->name('form_couture');
+
+Route::post('enregistrement_couture', [CouturesController::class,'enregistrement_couture']);
 
 Route::get('paiements', [PaiementsController::class,'paiements'])->name('paiements');
 
@@ -58,6 +64,11 @@ Route::post('enregistrement_personnel', [PersonnelsController::class,'ajouter_pe
 Route::get('personnels', [PersonnelsController::class,'personnels'])->name('personnels');
 
 Route::get('rendez_vous', [Rendez_vouscontroller::class,'rendez_vous'])->name('rendez_vous');
+
+Route::get('rv.ajout_rendez_vous', [Rendez_vousController::class,'form_rendez_vous'])->name('form_rendez_vous');
+
+Route::post('ajouter_traitement', [Rendez_vousController::class,'ajouter_rendez_vous_traitement']);
+
 
 
 Route::controller(PaiementsController::class)->group(function () {

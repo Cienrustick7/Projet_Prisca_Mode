@@ -29,8 +29,8 @@
 
               </tr>
             </thead>
-            <tbody>
-              
+
+
               @foreach ($clients as $cli)
               <tr>
                   <td>{{ $cli->id }}</td>
@@ -41,7 +41,7 @@
 
               </tr>
           @endforeach
-            </tbody>
+
           </table>
 
      </div>

@@ -11,37 +11,42 @@
     <section class="container-fluid">
         <div class="row">
 @include('layouts.navbar')
+<div class="col-lg-10">
 
-<div class="col-lg-10 mt-3">
-    <h1 class="text-center">LISTE DES PERSONNELS</h1>
-    <div class="container">
-        <a href="{{ Route('form_personnel') }}" class="btn btn-danger">Nouveau+</a>
-    </div>
+        <div class="container mt-3">
+            <a href="{{ route('form_personnel') }}" class="btn btn-danger">Nouveau+</a>
+        </div>
+    <h1 style="text-align: center">Liste des personnels</h1>
     <table class="table">
         <thead>
           <tr>
             <th scope="col">id</th>
-            <th scope="col">nom_prenom</th>
+            <th scope="col">Nom_Prenom</th>
             <th scope="col">adresse</th>
-            <th scope="col">telephone</th>
+            <th scope="col">Telephone</th>
             <th scope="col">type_personnel</th>
+
           </tr>
         </thead>
         <tbody>
-        
-          @foreach ($personnels as $per)
-          <tr>
-              <td>{{ $per->id }}</td>
-              <td>{{ $per->nom_prenom }}</td>
-              <td>{{ $per->adresse }}</td>
-              <td>{{ $per->telephone }}</td>
-              <td>{{ $per->type_personnel }}</td>
 
-          </tr>
-      @endforeach
+            @foreach ($personnels as $per)
+            <tr>
+                <td>{{ $per->id }}</td>
+                <td>{{ $per->nom_prenom }}</td>
+                <td>{{ $per->adresse }}</td>
+                <td>{{ $per->telephone }}</td>
+                <td>{{ $per->type_personnel }}</td>
+
+            </tr>
+        @endforeach
 
         </tbody>
       </table>
+
+ </div>
+</div>
+<div class="mt-6">
 
 </div>
 

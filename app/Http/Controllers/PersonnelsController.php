@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Http\Controllers\Controller;
 use App\Models\Personnels;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 class PersonnelsController extends Controller
 {
@@ -24,7 +23,6 @@ class PersonnelsController extends Controller
         return view('personnel.personnels', compact('personnels'));
     }
 
-
     /**
      * Show the form for creating a new resource.
      */
@@ -33,7 +31,6 @@ class PersonnelsController extends Controller
 
         return view('personnel.ajout_personnel');
     }
-
 
     /**
      * Store a newly created resource in storage.

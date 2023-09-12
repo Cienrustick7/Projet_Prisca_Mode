@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   @include('layouts.js')
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @include('layouts.js')
     <title>COUTURE PRISCA MODE</title>
 </head>
+
 <body>
-    <section class="container-fluid">
-        <div class="row">
-    <section class="container-fluid">
-        <div class="row">
-      @include('layouts.navbar')
 
-<div class="col-lg-10 mt-3">
-    <h1 class="text-center">RENDEZ_VOUS</h1>
-    <div class="container p-2 bg-danger m-1">
-        <form class="row g-3">
-            <div class="col-md-5 text-light">
-              <label for="inputLibelle" class="form-label">Libelle</label>
-              <input type="text" class="form-control" id="inputLibelle">
-            </div>
-            <div class="col-md-5 text-light">
-              <label for="inputDate_rendez_vous" class="form-label">Date_rendez_vous</label>
-              <input type="Date" class="form-control" id="inputDate_rendez_vous">
+<section class="container-fluid">
+   <div class="row">
+     @include('layouts.navbar')
+     <div class="col-lg-10">
+     <div class="container mt-3">
+         <a href="{{ route('form_rendez_vous') }}" class="btn btn-danger">Nouveau+</a>
+         <h1 style="text-align: center">liste rendez_vous</h1>
+     </div>
+        <table class="table">
+            <thead>
+              <tr>
 
-              <div class="col-md-6 mt-3">
-            <button type="submit" class="btn btn-primary">Enregistrer</button>
-              </div>
+                <th scope="col">libelle</th>
+                <th scope="col">date_rendez_vous</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+                <td>recuperation_veste</td>
+                <td>15/08/2023</td>
+              </tr>
 
 
-    </form>
-</div>
+                <td>essaie_robe_marie</td>
+                <td>15/08/2023</td>
+              </tr>
 
-</div>
 
-</div>
-</section>
-@include('layouts.script')
+            </tbody>
+          </table>
 
+     </div>
+    </div>
+
+    </section>
+
+
+    @include('layouts.script')
 </body>
-</html>
 
+</html>
