@@ -15,30 +15,16 @@
             @include('layouts.navbar')
             <div class="col-lg-10">
 
-                @if (session('status'))
-                    <div class="alert alert-succès">
-                        {{ session('status') }}
-                    </div>
-                @endif
-
-                <div class="container mt-3">
-                    <a href="{{ Route('coutures') }}" class="btn btn-danger">Liste</a>
-                </div>
-                <div class="text-center">
-                    <h1>Formulaire d'ajout couture</h1>
-                </div>
-                <hr>
-                @if (session('status'))
-                    <div class="alert alert-success">
-                        {(session('status'))}
-                    </div>
-                @endif
-
-                <form action="enregistrement_couture" method="POST" class="form-group">
-
-                    @csrf
-                    <section class="contenair p-2 bg-danger mt-3 m-3">
-                        <div class="row mt-3">
+        @if (session('status'))
+        <div class="alert alert-succès">
+            {{ session('status') }}
+        </div>
+    @endif
+             <hr>
+               <form action="enregistrement_couture" method="POST" class="form-group">
+                @csrf
+                <section class="contenair p-2 bg-danger mt-3 m-3">
+                    <div class="row mt-3">
 
                             <div class="row mt-4">
                                 <div class="col-lg-6">
@@ -49,25 +35,26 @@
                                 </div>
                             </div>
 
-                            <div class="row mt-4">
-                                <div class="col-lg-6">
-                                    <input type="date" name="Date_depot" class="form-control"
-                                        placeholder="date_depot">
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="date" name="date_recuperation" class="form-control"
-                                        placeholder="date_recuperation">
-                                </div>
-                                <div class="row mt-4">
-                                    <div class="col-lg-6">
-                                        <select class="champ col-lg-12" style="height: 150%" name="Idclients">
-                                            <option>Selectionner un modele</option>
-                                            @foreach ($modeles as $mod)
-                                                <option value="{{$mod->id}}">{{$mod->nom_modele}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-6">
+                        <div class="row mt-4">
+                            <div class="col-lg-6">
+                                <input type="date" name="Date_depot" class="form-control" placeholder="date_depot">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="date" name="date_recuperation" class="form-control" placeholder="date_recuperation">
+                            </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-6">
+                                <input type="text" name="nom_model" class="form-control" placeholder="nom_modele">
+
+                                <select class="champ" name="Idclients">
+
+                                    <option>Selectionner un modele</option>;
+
+                                </select>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" name="nom_client" class="form-control" placeholder="nom_client">
 
                                         <select class="champ col-lg-12" style="height: 150%" name="Idclients">
 

@@ -71,7 +71,10 @@ Route::post('ajouter_traitement', [Rendez_vousController::class,'ajouter_rendez_
 
 
 
+Route::controller(PaiementsController::class)->group(function () {
 
+    Route::get('coutures/{libelle}/paiements', 'index')->name('paiements.coutures');
+});
 
 
 

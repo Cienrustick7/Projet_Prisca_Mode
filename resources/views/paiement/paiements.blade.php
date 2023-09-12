@@ -14,7 +14,19 @@
               <a href="{{ route('form_paiement') }}" class="btn btn-danger">Nouveau+</a>
           </div>
 
+          <table class="table mt-3">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">montant_payer</th>
+                <th scope="col">avance</th>
+                <th scope="col">reste</th>
+                <th scope="col">coutures_id</th>
 
+              </tr>
+            </thead>
+
+          </table>
 @include('layouts.script')
 </body>
 </html>

@@ -19,7 +19,8 @@ class PersonnelsController extends Controller
      */
     public function personnels()
     {
-        return view('personnel.personnels');
+        $personnels = Personnels::all();
+        return view('personnel.personnels', compact('personnels'));
     }
 
     /**
@@ -27,6 +28,7 @@ class PersonnelsController extends Controller
      */
     public function form_personnel()
     {
+
         return view('personnel.ajout_personnel');
     }
 

@@ -44,16 +44,16 @@ class CouturesController extends Controller
     public function enregistrement_couture (Request $request)
     {
         $request->validate([
-            'libelle' => 'required',
+            'montant' => 'required',
             'date_depot' => 'required',
             'date_recuperation' => 'required',
             'id_clients' => 'required',
             'id_modeles' => 'required',
         ]);
 
-        $coutures = new coutures();
-        $coutures->libelle = $request->montant;
-        $coutures->date_depot= $request->date_depot;
+        $coutures = new Coutures();
+        $coutures->montant = $request->motant;
+        $coutures->date_depot = $request->date_depot;
         $coutures->date_recuperation = $request->date_recuperation;
         $coutures->id_modeles = $request->id_modeles;
         $coutures->clients_id = $request->clients_id;
