@@ -35,7 +35,7 @@
                 <form action="ajouter_traitement" method="POST" class="form-group">
 
                     @csrf
-                    <section class="contenair p-2 bg-danger mt-3 m-3">
+                    <section class="container p-2 bg-danger mt-3 m-3">
                         <div class="row mt-3">
 
                             <div class="row mt-3">
@@ -65,6 +65,7 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </section>
                 </form>
             </div>
