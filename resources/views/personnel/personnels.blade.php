@@ -11,11 +11,11 @@
     <section class="container-fluid">
         <div class="row">
 @include('layouts.navbar')
-
 <div class="col-lg-10">
-    <div class="container mt-3">
- <a href="{{ Route('form_personnel') }}" class="btn btn-danger">Nouveau+</a>
-    </div>
+
+        <div class="container mt-3">
+            <a href="{{ route('form_personnel') }}" class="btn btn-danger">Nouveau+</a>
+        </div>
     <h1 style="text-align: center">Liste des personnels</h1>
     <table class="table">
         <thead>

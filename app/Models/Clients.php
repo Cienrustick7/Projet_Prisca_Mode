@@ -15,4 +15,12 @@ class Clients extends Model
         'telephone',
         'sexe',
     ];
+
+    public function coutures () {
+        return $this->hasMany(Coutures::class);
+    }
 }
+
+
+
+

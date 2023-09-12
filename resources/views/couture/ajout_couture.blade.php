@@ -40,43 +40,54 @@
                     <section class="contenair p-2 bg-danger mt-3 m-3">
                         <div class="row mt-3">
 
-                            <div class="row mt-3">
+                            <div class="row mt-4">
                                 <div class="col-lg-6">
-                                    <input type="text" name="id" class="form-control"
-                                        placeholder="id">
+                                    <input type="text" id="id" class="form-control" placeholder="id">
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="text" name="montant" class="form-control" placeholder="montant">
-                                </div>
-                            </div>
-
-                            <div class="row mt-3">
-                                <div class="col-lg-6">
-                                    <input type="date" name="date_depot" class="form-control" placeholder="date_depot">
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="date" name="date_recuperation" class="form-control" placeholder="date_recuperation">
+                                    <input type="text" name="libelle" class="form-control" placeholder="libelle">
                                 </div>
                             </div>
 
-                             <div class="row mt-3">
+                            <div class="row mt-4">
                                 <div class="col-lg-6">
-                                    <input type="liste" name="modeles_id" class="form-control"
-                                        placeholder="modeles_id">
+                                    <input type="date" name="Date_depot" class="form-control"
+                                        placeholder="date_depot">
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="liste" name="clients_id" class="form-control" placeholder="clients_id">
+                                    <input type="date" name="date_recuperation" class="form-control"
+                                        placeholder="date_recuperation">
                                 </div>
-                            </div>
+                                <div class="row mt-4">
+                                    <div class="col-lg-6">
+                                        <select class="champ col-lg-12" style="height: 150%" name="Idclients">
+                                            <option>Selectionner un modele</option>
+                                            @foreach ($modeles as $mod)
+                                                <option value="{{$mod->id}}">{{$mod->nom_modele}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
 
+                                        <select class="champ col-lg-12" style="height: 150%" name="Idclients">
 
-                            <div class="row m-3">
-                                <div class="col-6">
-                                    <div class="col-auto">
-                                        <button type="submit" class="btn btn-dark text-light mb-2">Ajouter</button>
+                                            <option>Selectionner un client</option>;
+                                            @foreach ($clients as $cli)
+                                                <option value="{{$cli->id}}">{{$cli->nom_prenom}}</option>
+                                            @endforeach
+                                        </select>
+
                                     </div>
                                 </div>
-                            </div>
+
+
+                                <div class="row m-3">
+                                    <div class="col-6">
+                                        <div class="col-auto">
+                                            <button type="submit" class="btn btn-dark text-light mb-2">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
                     </section>
                 </form>
             </div>

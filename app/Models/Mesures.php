@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Mesures extends Model
 {
     use HasFactory;
+
+    
 }

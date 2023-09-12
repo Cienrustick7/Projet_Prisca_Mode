@@ -44,7 +44,7 @@
               <label for="inputDate_paiement" class="form-label">Date_paiement</label>
               <input type="Date" class="form-control" id="inputDate_paiement">
             </div>
-            <div
+            
 
             <div class="col-3">
               <button type="submit" class="btn btn-primary">Enregistrer</button>

@@ -11,7 +11,7 @@
           @include('layouts.navbar')
           <div class="col-lg-10">
           <div class="container mt-3">
-              <a href="{{ route('paiements') }}" class="btn btn-danger">Nouveau+</a>
+              <a href="{{ route('form_paiement') }}" class="btn btn-danger">Nouveau+</a>
           </div>
 
 

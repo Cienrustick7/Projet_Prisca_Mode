@@ -10,10 +10,11 @@ class Coutures extends Model
     use HasFactory;
 
     protected $fillable = [
-        'montant',
+        'libelle',
         'date_depot',
         'date_recuperation',
-        'id_modeles',
+        'models_id',
         'clients_id',
     ];
+
 }

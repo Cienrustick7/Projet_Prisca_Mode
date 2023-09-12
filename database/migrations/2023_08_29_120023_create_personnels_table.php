@@ -17,8 +17,6 @@ return new class extends Migration
             $table->string('adresse');
             $table->Integer('telephone');
             $table->string('type_personnel');
-            $table->unsignedBigInteger('users_id')->unsigned();
-            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

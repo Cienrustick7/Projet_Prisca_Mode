@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Coutures;
+use App\Models\Modeles;
+use App\Models\Clients;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -20,7 +22,8 @@ class CouturesController extends Controller
      */
     public function coutures()
     {
-        return view('couture.coutures');
+        $coutures = Coutures::all();
+        return view('couture.coutures', compact('coutures'));
     }
 
     /**
@@ -28,8 +31,12 @@ class CouturesController extends Controller
      */
     public function form_couture()
     {
-        return view('couture.ajout_couture');
+        $modeles = Modeles::all();
+        $clients = Clients::all();
+        return view('couture.ajout_couture', compact('modeles', 'clients'));
     }
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -37,7 +44,7 @@ class CouturesController extends Controller
     public function enregistrement_couture (Request $request)
     {
         $request->validate([
-            'montant' => 'required',
+            'libelle' => 'required',
             'date_depot' => 'required',
             'date_recuperation' => 'required',
             'id_clients' => 'required',
@@ -45,7 +52,7 @@ class CouturesController extends Controller
         ]);
 
         $coutures = new coutures();
-        $coutures->montant = $request->montant;
+        $coutures->libelle = $request->montant;
         $coutures->date_depot= $request->date_depot;
         $coutures->date_recuperation = $request->date_recuperation;
         $coutures->id_modeles = $request->id_modeles;
