@@ -18,12 +18,8 @@
 </div>
 @endif
 
-<ul>
-    @foreach ($errors->all() as $error)
-        <li class="alert alert-danger"> {{ $error }}</li>
-    @endforeach
-    </ul>
-<div class="col-lg-10 mt-3">
+
+<div class="col-lg-10">
 
     <div class="container mt-3">
         <a href="{{ Route('personnels') }}" class="btn btn-danger">Liste</a>
@@ -36,7 +32,7 @@
         <form action="enregistrement_personnel" method="POST" class="row g-3 form-group">
          @csrf
 
-         <section class="contenair p-2 bg-danger mt-3 m-3">
+         <section class="container p-2 bg-danger mt-3 m-3">
             <div class="row mt-3">
 
                 <div class="row mt-3">
