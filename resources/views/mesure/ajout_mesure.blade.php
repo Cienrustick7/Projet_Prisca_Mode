@@ -14,7 +14,7 @@
     <div class="col-lg-10">
         <a href="{{ Route('mesures') }}"></a>
         <div class="container mt-3" style="text-align: center">
-            <h1>LISTE DES MESURES </h1>
+            <h1>formulaire des mesures </h1>
                </div>
                <form method="post" action="insertion_clients.php">
                 <section class="contenair p-2 bg-danger mt-3 m-3">
@@ -48,8 +48,8 @@
                           </div>
 
                           <div class="col-md-3">
-                            <label for="inputEmail4" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <label for="inputcouture_exterieure" class="form-label">Couture_exterieure</label>
+                            <input type="number" class="form-control" id="number">
                           </div>
                           <div class="col-md-3">
                             <label for="inputLongueur_du_corps" class="form-label">Longueur_corps</label>
@@ -110,7 +110,7 @@
                             <label for="inputEntrejambe" class="form-label">genou_cheville</label>
                             <input type="number" class="form-control" id="number">
                           </div>
-
+                          <div class="row mt-4">
                           <div class="col-md-3">
                             <label for="inputGenou_cheville" class="form-label">couture_exterieure</label>
                             <input type="number" class="form-control" id="number">
@@ -119,14 +119,26 @@
                             <label for="inputHauteur_totale" class="form-label">Hauteur_totale</label>
                             <input type="number" class="form-control" id="number">
                           </div>
-                          <div class="col-md-3">
-                            <label for="clients_id" class="form-label">clients_id</label>
-                            <input type="number" class="form-control" id="number">
-                          </div>
-                          <div class="col-md-3">
-                            <label for="modeles_id" class="form-label">modeles_id</label>
-                            <input type="number" class="form-control" id="number">
-                          </div>
+
+                                    <div class="col-md-3 mt-3">
+                                        <select class="champ col-lg-12" style="height: 60%" name="Idclients">
+                                            <option>Selectionner un modele</option>
+                                            @foreach ($modeles as $mod)
+                                                <option value="{{$mod->id}}">{{$mod->nom_modele}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 mt-3">
+
+                                        <select class="champ col-lg-12" style="height: 60%" name="Idclients">
+
+                                            <option>Selectionner un client</option>;
+                                            @foreach ($clients as $cli)
+                                                <option value="{{$cli->id}}">{{$cli->nom_prenom}}</option>
+                                            @endforeach
+                                        </select>
+
+                                    </div>
                         </div>
                 </section>
                 <div>
