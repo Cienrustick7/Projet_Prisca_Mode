@@ -58,7 +58,10 @@ Route::get('personnels', [PersonnelsController::class,'personnels'])->name('pers
 Route::get('rendez_vous', [Rendez_vouscontroller::class,'rendez_vous'])->name('rendez_vous');
 
 
+Route::controller(PaiementsController::class)->group(function () {
 
+    Route::get('coutures/{libelle}/paiements', 'index')->name('paiements.coutures');
+});
 
 
 

@@ -30,7 +30,7 @@ class CouturesController extends Controller
     public function ajouter_couture(Request $request)
     {
         $request->validate([
-            'montant' => 'required',
+            'lebelle' => 'required',
             'date_depot' => 'required',
             'date_recuperation' => 'required',
             'models_id' => 'required',
@@ -40,7 +40,7 @@ class CouturesController extends Controller
         ]);
 
         $coutures = new Coutures();
-        $coutures->montant = $request->motant;
+        $coutures->libelle = $request->libelle;
         $coutures->date_depot = $request->date_depot;
         $coutures->date_recuperation = $request->date_recuperation;
         $coutures->models_id = $request->models_id;

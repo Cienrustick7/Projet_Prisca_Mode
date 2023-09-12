@@ -28,30 +28,17 @@
           </tr>
         </thead>
         <tbody>
+        
+          @foreach ($personnels as $per)
           <tr>
-            <th scope="row">1</th>
-            <td>Joyeuse sarah</td>
-            <td>Goughin</td>
-            <td>54287624</td>
-            <td>comptable</td>
-          </tr>
+              <td>{{ $per->id }}</td>
+              <td>{{ $per->nom_prenom }}</td>
+              <td>{{ $per->adresse }}</td>
+              <td>{{ $per->telephone }}</td>
+              <td>{{ $per->type_personnel }}</td>
 
-          <tr>
-            <th scope="row">2</th>
-            <td>Stevie</td>
-            <td>zone1</td>
-            <td>5245852</td>
-            <td>chef d'achat</td>
           </tr>
-
-
-          <tr>
-            <th scope="row">3</th>
-            <td>Marayo</td>
-            <td>Wemtenga</td>
-            <td>54006250</td>
-            <td>Couturier</td>
-          </tr>
+      @endforeach
 
         </tbody>
       </table>

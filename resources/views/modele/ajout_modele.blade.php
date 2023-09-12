@@ -32,7 +32,7 @@
                           <input type="file" class="form-control" id="inputImage">
                         </div>
 
-                        <div
+                        
 
                         <div class="col-12">
                           <button type="submit" class="btn btn-primary">Enregistrer</button>

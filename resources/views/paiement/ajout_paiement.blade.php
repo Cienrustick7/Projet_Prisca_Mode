@@ -28,27 +28,48 @@
 
             @csrf
 
-            <div class="col-md-2 text-light">
-              <label for="inputMontant_payer" class="form-label">Montant_payer</label>
-              <input type="text" class="form-control" id="inputMontant_payer">
-            </div>
-            <div class="col-md-2 text-light">
-              <label for="inputAvance" class="form-label">Avance</label>
-              <input type="text" class="form-control" id="inputAvance">
-            </div>
-            <div class="col-md-2 text-light">
-              <label for="inputReste" class="form-label">Reste</label>
-              <input type="text" class="form-control" id="inputReste">
-            </div>
-            <div class="col-md-2 text-light">
-              <label for="inputDate_paiement" class="form-label">Date_paiement</label>
-              <input type="Date" class="form-control" id="inputDate_paiement">
-            </div>
-            
+                <section class="contenair p-2 bg-danger mt-3 m-3">
+                    <div class="row mt-3">
 
-            <div class="col-3">
-              <button type="submit" class="btn btn-primary">Enregistrer</button>
-            </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-6">
+                                <input type="text" name="montant_payer" class="form-control"
+                                    placeholder="montant_payer">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" name="avance" class="form-control" placeholder="avance">
+                            </div>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-lg-6">
+                                <input type="text" name="reste" class="form-control" placeholder="reste">
+                            </div>
+                            <div class="col-lg-6">
+
+                             <select class="form-control" id="coutures_id" style="width: 100%" name="Idcoutures">
+                                <option>Selectionner couture</option>;
+
+                                @foreach ($coutures as  $couture )
+                                <option value="{{  $couture->id }}">{{  $couture->libelle }}</option>;
+
+                                @endforeach
+
+
+
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="row m-3">
+                            <div class="col-6">
+                                <div class="col-auto">
+                                    <button type="submit"  class="btn btn-dark text-light mb-2">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                </section>
           </form>
     </div>
 
