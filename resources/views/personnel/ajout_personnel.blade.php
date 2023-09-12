@@ -19,6 +19,8 @@
 @endif
 
 
+<div class="col-lg-10">
+
 <div class="col-lg-10 mt-3">
 
     <div class="container mt-3">
@@ -28,11 +30,11 @@
     <h1 class="text-center">FORMULAIRE D'AJOUT</h1>
    </div>
     <hr>
-    <div class="container p-2 bg-danger m-3">
+    <div class="container p-2 bg-danger ">
         <form action="enregistrement_personnel" method="POST" class="row g-3 form-group">
          @csrf
 
-         <section class="contenair p-2 bg-danger mt-3 m-3">
+         <section class="contenair p-2 bg-danger mt-3">
             <div class="row mt-3">
 
                 <div class="row mt-3">

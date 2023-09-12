@@ -44,17 +44,17 @@
                             </div>
                         <div class="row mt-4">
                             <div class="col-lg-6">
-                                <input type="text" name="nom_model" class="form-control" placeholder="nom_modele">
 
-                                <select class="champ" name="Idclients">
+                                <select class="champ col-lg-12" style="height: 150%" name="Idmodeles">
 
                                     <option>Selectionner un modele</option>;
-
+                                    @foreach ($modeles as $mod)
+                                    <option value="{{$mod->id}}">{{$cli->nom_modele}}</option>
+                                @endforeach
                                 </select>
 
                             </div>
                             <div class="col-lg-6">
-                                <input type="text" name="nom_client" class="form-control" placeholder="nom_client">
 
                                         <select class="champ col-lg-12" style="height: 150%" name="Idclients">
 

@@ -29,34 +29,17 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Sankara_Louis</td>
-            <td>Kouritenga</td>
-            <td>70589633</td>
-            <td>couturier</td>
 
-          </tr>
+            @foreach ($personnels as $per)
+            <tr>
+                <td>{{ $per->id }}</td>
+                <td>{{ $per->nom_prenom }}</td>
+                <td>{{ $per->adresse }}</td>
+                <td>{{ $per->telephone }}</td>
+                <td>{{ $per->type_personnel }}</td>
 
-          <tr>
-            <th scope="row">2</th>
-            <td>Umuhoza_Athanasia</td>
-            <td>ouaga2000</td>
-            <td>65154897</td>
-            <td>comptable</td>
-
-          </tr>
-
-
-          <tr>
-            <th scope="row">3</th>
-            <td>Hirwa_Noelly</td>
-            <td>karpala</td>
-            <td>63258010</td>
-            <td>Couturiere</td>
-
-          </tr>
-      
+            </tr>
+        @endforeach
 
         </tbody>
       </table>
