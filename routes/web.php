@@ -39,17 +39,17 @@ Route::get('ajout_modele', [ModelesController::class,'form_modele'])->name('form
 
 Route::post('enregistrement_modele', [ModelesController::class,'ajouter_modele'])->name('ajouter_modele');
 
-Route::get('mesures', [MesuresController::class,'mesures'])->name('mesures');
+Route::get('liste_des_mesures', [MesuresController::class,'mesures'])->name('mesures');
 
-Route::get('ajout-mesure', [MesuresController::class,'form_mesure'])->name('form_mesure');
+Route::get('formulaire-mesure', [MesuresController::class,'form_mesure'])->name('form_mesure');
 
-Route::post('enregistrement_mesure', [MesuresController::class,'enregistrement_mesure']);
+Route::post('ajouter_mesure', [MesuresController::class,'store'])->name('store_mesure');
 
-Route::get('coutures', [CouturesController::class,'coutures'])->name('coutures');
+Route::get('liste_des_coutures', [CouturesController::class,'coutures'])->name('coutures');
 
-Route::get('ajout-couture', [CouturesController::class,'form_couture'])->name('form_couture');
+Route::get('formulaire-couture', [CouturesController::class,'form_couture'])->name('form_couture');
 
-Route::post('enregistrement_couture', [CouturesController::class,'enregistrement_couture']);
+Route::post('ajouter_couture', [CouturesController::class,'store'])->name('store_couture');
 
 Route::get('paiements', [PaiementsController::class,'paiements'])->name('paiements');
 

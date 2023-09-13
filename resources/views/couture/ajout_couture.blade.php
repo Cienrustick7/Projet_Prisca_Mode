@@ -20,16 +20,17 @@
             {{ session('status') }}
         </div>
     @endif
+         <div class="text-center">
+        <h1>Formulaire d'ajout couture</h1>
+          </div>
              <hr>
-               <form action="enregistrement_couture" method="POST" class="form-group">
+               <form action="{{route('store_couture')}}" method="POST" class="form-group">
                 @csrf
                 <section class="contenair p-2 bg-danger mt-3 m-3">
                     <div class="row mt-3">
 
                             <div class="row mt-4">
-                                <div class="col-lg-6">
-                                    <input type="text" id="id" class="form-control" placeholder="id">
-                                </div>
+
                                 <div class="col-lg-6">
                                     <input type="text" name="libelle" class="form-control" placeholder="libelle">
                                 </div>
@@ -37,7 +38,7 @@
 
                         <div class="row mt-4">
                             <div class="col-lg-6">
-                                <input type="date" name="Date_depot" class="form-control" placeholder="date_depot">
+                                <input type="date" name="date_depot" class="form-control" placeholder="date_depot">
                             </div>
                             <div class="col-lg-6">
                                 <input type="date" name="date_recuperation" class="form-control" placeholder="date_recuperation">
@@ -45,18 +46,18 @@
                         <div class="row mt-4">
                             <div class="col-lg-6">
 
-                                <select class="champ col-lg-12" style="height: 150%" name="Idmodeles">
+                                <select class="champ col-lg-12" style="height: 150%" name="modeles_id">
 
                                     <option>Selectionner un modele</option>;
                                     @foreach ($modeles as $mod)
-                                    <option value="{{$mod->id}}">{{$cli->nom_modele}}</option>
+                                    <option value="{{$mod->id}}">{{$mod->nom_modele}}</option>
                                 @endforeach
                                 </select>
 
                             </div>
                             <div class="col-lg-6">
 
-                                        <select class="champ col-lg-12" style="height: 150%" name="Idclients">
+                                        <select class="champ col-lg-12" style="height: 150%" name="clients_id">
 
                                             <option>Selectionner un client</option>;
                                             @foreach ($clients as $cli)

@@ -37,7 +37,7 @@ class MesuresController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function enregistrement_mesure(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'tete' => 'required',
@@ -94,7 +94,7 @@ class MesuresController extends Controller
 
         $mesures->save();
 
-        return redirect()->route('enregistrement_mesure')->with('status', 'les mesures a bien été ajouter avec succès');
+        return redirect()->route('form_mesure')->with('status', 'les mesures a bien été ajouter avec succès');
 
     }
 

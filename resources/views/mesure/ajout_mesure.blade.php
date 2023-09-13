@@ -12,11 +12,19 @@
         <div class="row">
             @include('layouts.navbar')
     <div class="col-lg-10">
-        <a href="{{ Route('mesures') }}"></a>
-        <div class="container mt-3" style="text-align: center">
+        @if (session('status'))
+        <div class="alert alert-succès">
+            {{ session('status') }}
+        </div>
+    @endif
+    <div class="container mt-3">
+        <a href="{{ Route('mesures') }}" class="btn btn-danger">Liste</a>
+    </div>
+
+        <div class="text-center">
             <h1>formulaire des mesures </h1>
                </div>
-               <form method="post" action="insertion_clients.php">
+               <form method="POST" action="{{ route('store_mesure')}}" class="form-group">
                 <section class="contenair p-2 bg-danger mt-3 m-3 text-light">
                     <div class="row mt-3">
 
@@ -121,7 +129,7 @@
                           </div>
 
                                     <div class="col-md-3 mt-2">
-                                        <select class="champ col-lg-12" style="height: 60%" name="Idclients">
+                                        <select class="champ col-lg-12" style="height: 60%" name="modeles_id">
                                             <option>Selectionner un modele</option>
                                             @foreach ($modeles as $mod)
                                                 <option value="{{$mod->id}}">{{$mod->nom_modele}}</option>
@@ -130,7 +138,7 @@
                                     </div>
                                     <div class="col-md-3 mt-2">
 
-                                        <select class="champ col-lg-12" style="height: 60%" name="Idclients">
+                                        <select class="champ col-lg-12" style="height: 60%" name="clients_id">
 
                                             <option>Selectionner un client</option>;
                                             @foreach ($clients as $cli)
@@ -141,8 +149,12 @@
                                     </div>
                         </div>
                 </section>
-                <div>
-                    <button type="button" class="btn btn-danger">ENREGISTRE</button>
+                <div class="row m-3">
+                    <div class="col-6">
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-dark text-light mb-2">Ajouter</button>
+                        </div>
+                    </div>
                 </div>
     </form>
     </div>
