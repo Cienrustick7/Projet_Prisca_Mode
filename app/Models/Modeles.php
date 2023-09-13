@@ -14,4 +14,14 @@ class Modeles extends Model
         'nom_modele',
         'image',
         ];
+
+        public function mesures(): HasMany
+{
+    return $this->hasMany(Mesures::class);
+}
+
+public function coutures(): HasMany
+{
+    return $this->hasMany(Coutures::class);
+}
 }

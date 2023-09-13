@@ -29,7 +29,7 @@
 
               </tr>
             </thead>
-
+            <tbody>
 
               @foreach ($clients as $cli)
               <tr>
@@ -41,7 +41,7 @@
 
               </tr>
           @endforeach
-
+        </tbody>
           </table>
 
      </div>

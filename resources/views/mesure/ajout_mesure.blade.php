@@ -17,7 +17,7 @@
             <h1>formulaire des mesures </h1>
                </div>
                <form method="post" action="insertion_clients.php">
-                <section class="contenair p-2 bg-danger mt-3 m-3">
+                <section class="contenair p-2 bg-danger mt-3 m-3 text-light">
                     <div class="row mt-3">
 
                         <div class="col-md-3">
@@ -110,17 +110,17 @@
                             <label for="inputEntrejambe" class="form-label">genou_cheville</label>
                             <input type="number" class="form-control" id="number">
                           </div>
-                          <div class="row mt-4">
+                          <div class="row mt-3">
                           <div class="col-md-3">
                             <label for="inputGenou_cheville" class="form-label">couture_exterieure</label>
                             <input type="number" class="form-control" id="number">
                           </div>
-                          <div class="col-md-3">
+                          <div class="col-md-3 ">
                             <label for="inputHauteur_totale" class="form-label">Hauteur_totale</label>
                             <input type="number" class="form-control" id="number">
                           </div>
 
-                                    <div class="col-md-3 mt-3">
+                                    <div class="col-md-3 mt-2">
                                         <select class="champ col-lg-12" style="height: 60%" name="Idclients">
                                             <option>Selectionner un modele</option>
                                             @foreach ($modeles as $mod)
@@ -128,7 +128,7 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="col-md-3 mt-3">
+                                    <div class="col-md-3 mt-2">
 
                                         <select class="champ col-lg-12" style="height: 60%" name="Idclients">
 

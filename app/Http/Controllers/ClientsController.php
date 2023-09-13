@@ -55,7 +55,7 @@ class ClientsController extends Controller
         $clients->sexe = $request->sexe;
         $clients->save();
 
-        return redirect()->route()->route('form_client')->with('status', 'le client a bien été ajouter avec succès');
+        return redirect()->route('form_client')->with('status', 'le client a bien été ajouter avec succès');
 
     }
 
