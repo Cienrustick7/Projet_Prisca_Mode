@@ -28,6 +28,8 @@
                 <th scope="col">Sexe</th>
 
               </tr>
+            </thead>
+            <tbody>
 
 
               @foreach ($clients as $cli)
@@ -40,11 +42,7 @@
 
               </tr>
           @endforeach
-            </thead>
-
-
-
-
+        </tbody>
           </table>
 
      </div>

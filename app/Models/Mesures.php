@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\Clients;
+use App\Models\Modeles;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -35,5 +36,15 @@ class Mesures extends Model
 'clients_id',
 'modeles_id',
         ];
+
+        public function clients(): BelongsTo
+        {
+            return $this->belongsTo(Clients::class);
+        }
+
+        public function modeles(): BelongsTo
+        {
+            return $this->belongsTo(Modeles::class);
+        }
 
 }

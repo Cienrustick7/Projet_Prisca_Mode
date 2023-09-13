@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Models\Paiements;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
 class Coutures extends Model
 {
     use HasFactory;
@@ -22,6 +24,18 @@ class Coutures extends Model
 {
     return $this->hasMany(Paiement::class);
 }
+
+
+public function clients(): BelongsTo
+{
+    return $this->belongsTo(Clients::class);
+}
+
+public function modeles(): BelongsTo
+{
+    return $this->belongsTo(Modeles::class);
+}
+
 
 }
 

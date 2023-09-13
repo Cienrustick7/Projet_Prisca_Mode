@@ -24,10 +24,6 @@ class PaiementsController extends Controller
         return view('paiement.paiements');
 
     }
-
-
-
-
      /**
      * Show the form for creating a new resource.
      */
@@ -37,8 +33,7 @@ class PaiementsController extends Controller
 
         return view('paiement.ajout_paiement', compact('coutures'));
     }
-
-
+    
     /**
      * Store a newly created resource in storage.
      */
