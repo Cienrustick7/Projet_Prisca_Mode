@@ -20,7 +20,19 @@
         <a href="{{ Route('form_modele') }}" class="btn btn-danger">Nouveau+</a>
     </div>
 
-        
+
+          @foreach ($modeles as $mod)
+          <div class="card" style="width: 10rem;">
+            <img src="{{asset('storage') . '/' . $mod->image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">{{ $mod->nom_modele }}</p>
+              <p class="card-text">{{ $mod->type_modele }}</p>
+            </div>
+          </div>
+
+      @endforeach
+
+</div>
 
     </section>
     @include('layouts.script')
