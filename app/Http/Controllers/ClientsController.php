@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Http\Controllers\ClientsControllerform_clients;
 use App\Models\Clients;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class ClientsController extends Controller
@@ -38,7 +39,7 @@ class ClientsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function ajouter_client_traitement (Request $request)
+    public function store (Request $request)
     {
         $request->validate([
             'nom_prenom' => 'required',
@@ -55,7 +56,7 @@ class ClientsController extends Controller
         $clients->sexe = $request->sexe;
         $clients->save();
 
-        return redirect()->route()->route('form_client')->with('status', 'le client a bien été ajouter avec succès');
+        return redirect()->route('form_client')->with('status', 'le client a bien été ajouter avec succès');
 
     }
 

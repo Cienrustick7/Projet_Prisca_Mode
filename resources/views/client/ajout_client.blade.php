@@ -32,7 +32,7 @@
                 <hr>
 
 
-                <form action="ajouter_traitement" method="POST" class="form-group">
+                <form action="{{ route('store_client') }}" method="POST" class="form-group">
 
                     @csrf
                     <section class="container p-2 bg-danger mt-3 m-3">
@@ -50,7 +50,7 @@
 
                             <div class="row mt-3">
                                 <div class="col-lg-6">
-                                    <input type="text" name="telephone" class="form-control" placeholder="telephone">
+                                    <input type="number" name="telephone" class="form-control" placeholder="telephone">
                                 </div>
                                 <div class="col-lg-6">
                                     <input type="text" name="sexe" class="form-control" placeholder="sexe">
@@ -65,7 +65,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </section>
                 </form>
             </div>

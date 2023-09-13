@@ -27,11 +27,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PagesController::class,'index']);
 
 
-Route::get('clients', [ClientsController::class,'clients'])->name('clients');
+Route::get('liste_des_clients', [ClientsController::class,'clients'])->name('clients');
 
-Route::get('ajout_client', [ClientsController::class,'form_client'])->name('form_client');
+Route::get('formulaire_client', [ClientsController::class,'form_client'])->name('form_client');
 
-Route::post('ajouter_traitement', [ClientsController::class,'ajouter_client_traitement']);
+Route::post('ajouter_clients', [ClientsController::class,'store'])->name('store_client');
 
 Route::get('Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
 
