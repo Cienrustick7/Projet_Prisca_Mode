@@ -20,45 +20,16 @@
         <a href="{{ Route('form_modele') }}" class="btn btn-danger">Nouveau+</a>
     </div>
 
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col-lg-3 " style="width: 350px ">
-              <div class="card">
-                <img src="{{asset('img/image robe mariage.jpg')}}" alt="...">
-                <div class="card-body">
-
-                  <p class="card-text">Robe de mariée 500.000FCFA</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3" style="width: 350px">
-              <div class="card">
-                <img src="{{asset('img/image couture 701.jpg')}}"  alt="...">
-                <div class="card-body">
-
-                  <p class="card-text">Ensemble veste femme 15.000FCFA</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3" style="width: 350px">
-              <div class="card">
-                <img src="{{asset('img/image costume homme trois pieces.webp')}}" alt="...">
-                <div class="card-body">
-
-                  <p class="card-text">veste trois pieces sur mesure 200000FCFA</p>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
 
           @foreach ($modeles as $mod)
-          <tr>
-              <td>{{ $mod->id }}</td>
-              <td>{{ $mod->type_modele }}</td>
-              <td>{{ $mod->nom_modele }}</td>
-              <td>{{ $mod->image }}</td>
-          </tr>
+          <div class="card" style="width: 10rem;">
+            <img src="{{asset('storage') . '/' . $mod->image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">{{ $mod->nom_modele }}</p>
+              <p class="card-text">{{ $mod->type_modele }}</p>
+            </div>
+          </div>
+
       @endforeach
 
 </div>

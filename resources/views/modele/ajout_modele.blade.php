@@ -37,11 +37,12 @@
                                     <div class="col-lg-6">
                                         <input type="text" name="type_modele" class="form-control"
                                             placeholder="type_modele">
+                                        </div>
+                                        
+                                        <div class="col-lg-6">
+                                            <input type="text" name="nom_modele" class="form-control" placeholder="nom_modele">
+                                        </div>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <input type="text" name="nom_modele" class="form-control" placeholder="nom_modele">
-                                    </div>
-                                </div>
 
                                 <div class="row mt-3">
                                     <div class="col-lg-6">
