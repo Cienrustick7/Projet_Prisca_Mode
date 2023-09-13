@@ -34,8 +34,6 @@ return new class extends Migration
             $table->Integer('genou_cheville');
             $table->Integer('couture_exterieure');
             $table->Integer('hauteur_totale');
-            $table->unsignedBigInteger('users_id')->unsigned();
-            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('clients_id')->unsigned();
             $table->foreign('clients_id')->references('id')->on('clients')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('modeles_id')->unsigned();

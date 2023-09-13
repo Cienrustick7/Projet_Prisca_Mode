@@ -41,26 +41,26 @@ class CouturesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function enregistrement_couture (Request $request)
+    public function store (Request $request)
     {
-        $request->validate([
-            'montant' => 'required',
-            'date_depot' => 'required',
-            'date_recuperation' => 'required',
-            'id_clients' => 'required',
-            'id_modeles' => 'required',
-        ]);
+        // $request->validate([
+        //     'montant' => 'required',
+        //     'date_depot' => 'required',
+        //     'date_recuperation' => 'required',
+        //     'id_clients' => 'required',
+        //     'modeles_id' => 'required',
+        // ]);
 
         $coutures = new Coutures();
-        $coutures->montant = $request->motant;
+        $coutures->libelle = $request->libelle;
         $coutures->date_depot = $request->date_depot;
         $coutures->date_recuperation = $request->date_recuperation;
-        $coutures->id_modeles = $request->id_modeles;
+        $coutures->modeles_id = $request->modeles_id;
         $coutures->clients_id = $request->clients_id;
 
         $coutures->save();
 
-        return redirect()->route('enregistrement_couture')->with('status', 'la couture a bien été ajouter avec succès');
+        return redirect()->route('form_couture')->with('status', 'la couture a bien été ajouter avec succès');
 
     }
 
