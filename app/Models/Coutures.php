@@ -5,7 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use App\Models\Paiements;
+use App\Models\Clients;
+use App\Models\Modeles;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Coutures extends Model
@@ -20,23 +22,17 @@ class Coutures extends Model
         'clients_id',
     ];
 
-    public function paiements(): HasMany
-{
-    return $this->hasMany(Paiement::class);
-}
+    function Client(){
+        return $this->belongsTo(Clients::class, 'clients_id');
+       }
 
+       function Modele(){
+        return $this->belongsTo(Modeles::class, 'modeles_id');
+       }
 
-public function clients(): BelongsTo
-{
-    return $this->belongsTo(Clients::class);
-}
-
-public function modeles(): BelongsTo
-{
-    return $this->belongsTo(Modeles::class);
-}
-
-
+       function User(){
+        return $this->belongsTo(User::class, 'users_id');
+       }
 }
 
 

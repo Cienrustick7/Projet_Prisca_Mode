@@ -24,18 +24,18 @@
                 <th scope="col">libelle</th>
                 <th scope="col">Date_depot</th>
                 <th scope="col">Date_recuperation</th>
-                <th scope="col">modeles_id</th>
-                <th scope="col">clients_id</th>
+                <th scope="col">Nom modele</th>
+                <th scope="col">Nom client</th>
               </tr>
             </thead>
             @foreach ($coutures as $cout )
             <tr>
                 <td>{{ $cout->id}}</td>
                 <td>{{ $cout->libelle}}</td>
-                <td>{{ $cout->Date_depot}}</td>
-                <td>{{ $cout->Date_recuperation}}</td>
-                <td>{{ $cout->modeles_id}}</td>
-                <td>{{ $cout->clients_id}}</td>
+                <td>{{ $cout->date_depot}}</td>
+                <td>{{ $cout->date_recuperation}}</td>
+                <td>{{ $cout->Modele->nom_modele}}</td>
+                <td>{{ $cout->Client->nom_prenom}}</td>
             </tr>
 
             @endforeach

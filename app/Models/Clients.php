@@ -18,15 +18,9 @@ class Clients extends Model
         'sexe',
     ];
 
-    public function mesures(): HasMany
-{
-    return $this->hasMany(Mesures::class);
-}
-
-public function coutures(): HasMany
-{
-    return $this->hasMany(Coutures::class);
-}
+   function Couture(){
+    return $this->hasOne(Couture::class);
+   }
 }
 
 
