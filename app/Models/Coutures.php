@@ -16,7 +16,7 @@ class Coutures extends Model
         'libelle',
         'date_depot',
         'date_recuperation',
-        'models_id',
+        'modeles_id',
         'clients_id',
     ];
 
