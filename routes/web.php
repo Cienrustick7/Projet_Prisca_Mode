@@ -51,11 +51,11 @@ Route::get('formulaire-couture', [CouturesController::class,'form_couture'])->na
 
 Route::post('ajouter_couture', [CouturesController::class,'store'])->name('store_couture');
 
-Route::get('paiements', [PaiementsController::class,'paiements'])->name('paiements');
+Route::get('liste_paiements', [PaiementsController::class,'paiements'])->name('paiements');
 
-Route::get('ajout_paiment', [PaiementsController::class,'form_paiement'])->name('form_paiement');
+Route::get('formulaire_paiment', [PaiementsController::class,'form_paiement'])->name('form_paiement');
 
-Route::post('enregistrement_paiement', [PaiementsController::class,'ajout_paiement']);
+Route::post('ajouter_paiement', [PaiementsController::class,'restore'])->name('store_paiement');
 
 Route::get('ajout_personnel', [PersonnelsController::class,'form_personnel'])->name('form_personnel');
 

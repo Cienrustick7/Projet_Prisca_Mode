@@ -33,11 +33,11 @@ class PaiementsController extends Controller
 
         return view('paiement.ajout_paiement', compact('coutures'));
     }
-    
+
     /**
      * Store a newly created resource in storage.
      */
-    public function ajout_paiement(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'montant_payer' => 'required',

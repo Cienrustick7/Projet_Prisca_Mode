@@ -24,7 +24,7 @@
 
     <h1 class="text-center">FORMULAIRE PAIEMENTS</h1>
     <div class="container p-2 bg-danger m-1">
-        <form action="enregistrement_paiement" method="POST" class="form-group row g-3">
+        <form action="store_paiement" method="POST" class="form-group row g-3">
 
             @csrf
 
@@ -47,11 +47,11 @@
                             </div>
                             <div class="col-lg-6">
 
-                             <select class="form-control" id="coutures_id" style="width: 100%" name="Idcoutures">
+                             <select class="form-control" style="width: 100%" name="coutures_id">
                                 <option>Selectionner couture</option>;
 
-                                @foreach ($coutures as  $couture )
-                                <option value="{{  $couture->id }}">{{  $couture->libelle }}</option>;
+                                @foreach ($coutures as  $cout )
+                                <option value="{{  $cout->id }}">{{  $cout->libelle }}</option>;
 
                                 @endforeach
 

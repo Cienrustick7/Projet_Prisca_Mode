@@ -26,6 +26,17 @@
               </tr>
             </thead>
 
+            @foreach ($paiements as $paiem )
+            <tr>
+                <td>{{ $paiem->id}}</td>
+                <td>{{ $paiem->montant_payer}}</td>
+                <td>{{ $paiem->avance}}</td>
+                <td>{{ $paiem->reste}}</td>
+                <td>{{ $cout->coutures_id}}</td>
+            </tr>
+
+            @endforeach
+
           </table>
 @include('layouts.script')
 </body>
