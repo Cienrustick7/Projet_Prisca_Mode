@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @include('layouts.js')
     <title>COUTURE PRISCA MODE</title>
 </head>
 <body>
 
-<section class="container-fluid">
-   <div class="row">
-     @include('layouts.navbar')
-     <div class="col-lg-10">
-        <div class="container mt-3">
-     <a href="{{ Route('form_mesure') }}" class="btn btn-danger">Nouveau+</a>
-        </div>
-        <h1 style="text-align: center">Liste de mesures</h1>
-        <table class="table">
+    <section class="container-fluid">
+        <div class="row">
+          @include('layouts.navbar')
+
+          <div class="col-lg-10">
+          <div class="container mt-3">
+              <a href="{{ route('form_mesure') }}" class="btn btn-danger">Nouveau+</a>
+          </div>
+
+          <div table-responsive>
+
+
+          <table class="table mt-3">
             <thead>
               <tr>
-                <th scope="col">tete</th>
-                <th scope="col">cou</th>
-                <th scope="col">epaule</th>
-                <th scope="col">longueur_bras</th>
-                <th scope="col">poitrine</th>
-                <th scope="col">tour_taille</th>
-                <th scope="col">longueur_du_corps</th>
-                <th scope="col">hanches</th>
-                <th scope="col">cuisse</th>
-                <th scope="col">genou</th>
-                <th scope="col">mollet</th>
-                <th scope="col">cheville</th>
-                <th scope="col">biceps</th>
-                <th scope="col">coude</th>
-                <th scope="col">avant_bras</th>
-                <th scope="col">poignet</th>
-                <th scope="col">poignet_coude</th>
-                <th scope="col">entrejambe</th>
-                <th scope="col">genou_cheville</th>
-                <th scope="col">couture_exterieure</th>
-                <th scope="col">hauteur_totale</th>
-                <th scope="col">nom_modele</th>
-                <th scope="col">nom_client</th>
+                <td scope="col">tete</td>
+                <td scope="col">cou</td>
+                <td scope="col">epaule</td>
+                <td scope="col">longueur_bras</td>
+                <td scope="col">poitrine</td>
+                <td scope="col">tour_taille</td>
+                <td scope="col">longueur_du_corps</td>
+                <td scope="col">hanches</td>
+                <td scope="col">cuisse</td>
+                <td scope="col">genou</td>
+                <td scope="col">mollet</td>
+                <td scope="col">cheville</td>
+                <td scope="col">biceps</td>
+                <td scope="col">coude</td>
+                <td scope="col">avant_bras</td>
+                <td scope="col">poignet</td>
+                <td scope="col">poignet_coude</td>
+                <td scope="col">entrejambe</td>
+                <td scope="col">genou_cheville</td>
+                <td scope="col">couture_exterieure</td>
+                <td scope="col">hauteur_totale</td>
+                <td scope="col">nom_modele</td>
+                <td scope="col">nom_client</td>
               </tr>
 
             </thead>
@@ -75,6 +76,7 @@
 
             @endforeach
           </table>
+        </div>
 
      </div>
     </div>
