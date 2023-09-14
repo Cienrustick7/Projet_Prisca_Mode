@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Mesures;
 use App\Models\Modeles;
 use App\Models\Clients;
+
 class MesuresController extends Controller
 {
     /**
@@ -65,7 +66,7 @@ class MesuresController extends Controller
             'modeles_id' => 'required',
         ]);
 
-        $mesures = new mesures();
+        $mesures = new Mesures();
         $mesures ->tete = $request->tete;
         $mesures ->cout= $request->cou;
         $mesures ->epaule = $request->epaule;
