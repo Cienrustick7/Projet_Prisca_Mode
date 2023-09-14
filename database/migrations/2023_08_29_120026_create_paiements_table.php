@@ -16,7 +16,7 @@ return new class extends Migration
             $table->Integer('montant_payer');
             $table->Integer('avance');
             $table->Integer('reste');
-            $table->string('date_paiement');
+            $table->date('date_paiement');
             $table->unsignedBigInteger('coutures_id')->unsigned();
             $table->foreign('coutures_id')->references('id')->on('coutures')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

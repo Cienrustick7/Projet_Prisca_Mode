@@ -53,7 +53,11 @@
                                     <input type="number" name="telephone" class="form-control" placeholder="telephone">
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="text" name="sexe" class="form-control" placeholder="sexe">
+                                    <select class="form-select" name="sexe" aria-label="Default select example" >
+                                        <option selected>Quel est votre sexe</option>
+                                        <option value="Masculin">Masculin</option>
+                                        <option value="Feminin">Feminin</option>
+                            </select>
                                 </div>
                             </div>
 

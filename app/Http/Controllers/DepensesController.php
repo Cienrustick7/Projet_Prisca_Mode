@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Depenses;
+use App\Models\Personnels;
 use Illuminate\Http\Request;
 
 class DepensesController extends Controller
@@ -20,15 +22,43 @@ class DepensesController extends Controller
      */
     public function depenses()
     {
-        return view('depense.depenses');
+        $depenses = Depenses::all();
+        return view('depense.depenses', compact('depenses'));
     }
+
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function form_depense()
+    {
+        $personnels = Personnels::all();
+        return view('depense.ajout_depense', compact('personnels'));
+    }
+
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'libelle' => 'required',
+            'montant' => 'required',
+            'date' => 'required',
+            'personnels_id'  => 'required',
+
+        ]);
+
+        $depenses = new Depenses();
+        $depenses->libelle = $request->libelle;
+        $depenses->montant = $request->montant;
+        $depenses->date = $request->date;
+        $depenses->personnels_id = $request->personnels_id;
+        $depenses->save();
+
+        return redirect()->route ('form_depense')->with('status', 'la depense a bien été ajouter avec succès');
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Rendez_vous;
+use App\Models\Clients;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,8 @@ class Rendez_vousController extends Controller
      */
     public function rendez_vous()
     {
-        return view('rv.rendez_vous');
+        $rendez_vous = Rendez_vous::all();
+        return view('rv.rendez_vous', compact('rendez_vous'));
     }
 
 
@@ -29,25 +31,26 @@ class Rendez_vousController extends Controller
      */
     public function form_rendez_vous()
     {
-        return view('rv.ajout_rendez_vous');
+        $clients = Clients::all();
+        return view('rv.ajout_rendez_vous', compact('clients'));
     }
 
 
     /**
      * Store a newly created resource in storage.
      */
-    public function ajouter_rendez_vous_traitement(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'libelle' => 'required',
-            'Date_rendez_vous' => 'required',
+            'Date_rdv' => 'required',
 
 
         ]);
 
         $rendez_vous = new Rendez_vous();
         $rendez_vous->libelle = $request->libelle;
-        $rendez_vous->date_rendez_vous = $request->date_rendez_vous;
+        $rendez_vous->date_rdv = $request->date_rdv;
         $rendez_vous->save();
 
 

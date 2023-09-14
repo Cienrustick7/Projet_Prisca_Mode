@@ -21,7 +21,9 @@ class PaiementsController extends Controller
      */
     public function paiements()
     {
-        return view('paiement.paiements');
+        $paiements = Paiements::all();
+
+        return view('paiement.paiements', compact('paiements'));
 
     }
      /**
@@ -30,14 +32,13 @@ class PaiementsController extends Controller
     public function form_paiement()
     {
         $coutures = Coutures::all();
-
         return view('paiement.ajout_paiement', compact('coutures'));
     }
-    
+
     /**
      * Store a newly created resource in storage.
      */
-    public function ajout_paiement(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'montant_payer' => 'required',
@@ -49,7 +50,7 @@ class PaiementsController extends Controller
         ]);
 
         $paiements = new Paiements();
-        $paiements->montant_paiement = $request->montant_paiement;
+        $paiements->montant_payer = $request->montant_payer;
         $paiements->avance = $request->avance;
         $paiements->reste = $request->reste;
         $paiements->date_paiement = $request->date_paiement;

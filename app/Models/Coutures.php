@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Models\Clients;
 use App\Models\Modeles;
+use App\Models\Paiements;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -33,6 +34,11 @@ class Coutures extends Model
        function User(){
         return $this->belongsTo(User::class, 'users_id');
        }
+
+
+   function Paiement(){
+    return $this->hasOne(Paiement::class);
+   }
 }
 
 

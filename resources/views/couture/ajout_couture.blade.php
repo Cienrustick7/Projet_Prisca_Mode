@@ -37,11 +37,13 @@
                                 </div>
                             </div>
 
-                        <div class="row mt-4">
-                            <div class="col-lg-6">
+                        <div class="row mt-4 text-light">
+                            <div class="col-lg-6 ">
+                                <label for="exampleInputdate_depot" class="form-label">date_depot</label>
                                 <input type="date" name="date_depot" class="form-control" placeholder="date_depot">
                             </div>
                             <div class="col-lg-6">
+                                <label for="exampleInputdate_recuperation" class="form-label">date_recuperation</label>
                                 <input type="date" name="date_recuperation" class="form-control" placeholder="date_recuperation">
                             </div>
                         <div class="row mt-4">
