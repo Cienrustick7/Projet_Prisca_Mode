@@ -55,19 +55,27 @@
                             </div>
                             <div class="col-lg-6">
 
-                             <select class="form-control" style="width: 100%" name="coutures_id">
-                                <option>Selectionner couture</option>;
+                                <div class="col-lg-6" style="width: 100%">
+                                    <input type="date" name="date_paiement" class="form-control" placeholder="date_paiement">
+                                </div>
 
-                                @foreach ($coutures as  $cout )
-                                <option value="{{  $cout->id }}">{{  $cout->libelle }}</option>;
-
-                                @endforeach
-
-
-
-                                </select>
                             </div>
                         </div>
+
+                        <div class="col-lg-6 mt-3">
+
+                            <select class="form-control" style="width: 100%" name="coutures_id">
+                               <option>Selectionner couture</option>;
+
+                               @foreach ($coutures as  $cout )
+                               <option value="{{  $cout->id }}">{{  $cout->libelle }}</option>;
+
+                               @endforeach
+
+
+
+                               </select>
+                           </div>
 
 
                         <div class="row m-3">

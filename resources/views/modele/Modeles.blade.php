@@ -22,8 +22,8 @@
 
 
           @foreach ($modeles as $mod)
-          <div class="card" style="width: 10rem;">
-            <img src="{{asset('storage') . '/' . $mod->image}}" class="card-img-top" alt="...">
+          <div class="card rounded float-start mt-2  " style="width:20%">
+            <img src="{{asset('storage') . '/' . $mod->image}}" class="" alt="...">
             <div class="card-body">
               <p class="card-text">{{ $mod->nom_modele }}</p>
               <p class="card-text">{{ $mod->type_modele }}</p>
