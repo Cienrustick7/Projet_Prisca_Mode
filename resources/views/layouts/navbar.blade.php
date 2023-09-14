@@ -21,7 +21,8 @@
                 <a class="dropdown-item" href="{{ Route('coutures')}}">COUTURES</a>
                 <a class="dropdown-item" href="{{ Route('paiements')}}">PAIEMENTS</a>
                 <a class="dropdown-item" href="{{ Route('personnels')}}">PERSONNELS</a>
-                <a class="dropdown-item" href="{{ Route('rendez_vous')}}">RENDEZ_VOUS</a>
+                <a class="dropdown-item" href="{{ Route('depenses')}}">DEPENSE</a>
+
 
 
 

@@ -57,6 +57,7 @@ class CouturesController extends Controller
         $coutures->date_recuperation = $request->date_recuperation;
         $coutures->modeles_id = $request->modeles_id;
         $coutures->clients_id = $request->clients_id;
+        $coutures->users_id = $request->users_id;
 
         $coutures->save();
 

@@ -12,39 +12,38 @@ class Mesures extends Model
 
     protected $fillable = [
 
-'tete',
-'cou',
-'epaule',
-'longueur_de_bras',
-'poitrine',
-'tour_de_taille',
-'longueur_du_corps',
-'hanches',
-'cuisse',
- 'genou',
-'mollet',
-'cheville',
-'biceps',
-'coude',
-'avant_bras',
-'poignet',
-'poignet_coude',
-'entrejambe',
-'genou_cheville',
-'couture_exterieure',
-'hauteur_totale',
-'clients_id',
-'modeles_id',
+        'tete',
+        'cou',
+        'epaule',
+        'longueur_de_bras',
+        'poitrine',
+        'tour_de_taille',
+        'longueur_du_corps',
+        'hanches',
+        'cuisse',
+        'genou',
+        'mollet',
+        'cheville',
+        'biceps',
+        'coude',
+        'avant_bras',
+        'poignet',
+        'poignet_coude',
+        'entrejambe',
+        'genou_cheville',
+        'couture_exterieure',
+        'hauteur_totale',
+        'clients_id',
+        'modeles_id',
         ];
 
-        public function clients(): BelongsTo
-        {
-            return $this->belongsTo(Clients::class);
-        }
+        function Client(){
+            return $this->belongsTo(Clients::class, 'clients_id');
+           }
 
-        public function modeles(): BelongsTo
-        {
-            return $this->belongsTo(Modeles::class);
-        }
+           function Modele(){
+            return $this->belongsTo(Modeles::class, 'modeles_id');
+           }
+
 
 }

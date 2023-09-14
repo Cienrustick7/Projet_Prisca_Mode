@@ -41,8 +41,8 @@
                 <th scope="col">genou_cheville</th>
                 <th scope="col">couture_exterieure</th>
                 <th scope="col">hauteur_totale</th>
-                <th scope="col">modeles_id</th>
-                <th scope="col">clients_id</th>
+                <th scope="col">nom_modele</th>
+                <th scope="col">nom_client</th>
               </tr>
 
             </thead>
@@ -69,8 +69,8 @@
                 <td>{{ $mes->genou_cheville}}</td>
                 <td>{{ $mes->couture_exterieure}}</td>
                 <td>{{ $mes->hauteur_totale}}</td>
-                <td>{{ $mes->modeles_id}}</td>
-                <td>{{ $mes->clients_id}}</td>
+                <td>{{ $mes->Modele->nom_modele}}</td>
+                <td>{{ $mes->Client->nom_prenom}}</td>
             </tr>
 
             @endforeach

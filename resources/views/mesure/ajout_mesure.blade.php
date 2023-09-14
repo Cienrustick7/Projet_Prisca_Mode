@@ -24,7 +24,8 @@
         <div class="text-center">
             <h1>formulaire des mesures </h1>
                </div>
-               <form method="POST" action="{{ route('store_mesure')}}" class="form-group">
+               <hr>
+               <form action="{{ route('store_mesure')}}" method="POST" class="form-group">
                 <section class="contenair p-2 bg-danger mt-3 m-3 text-light">
                     <div class="row mt-3">
 

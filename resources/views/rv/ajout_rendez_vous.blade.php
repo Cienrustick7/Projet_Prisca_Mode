@@ -29,10 +29,10 @@
                 </div>
                 <hr>
 
-                <form action="ajouter_traitement" method="POST" class="form-group">
+                <form action="{{ route('store_rendez_vous') }}" method="POST" class="form-group">
 
                     @csrf
-                    <section class="contenair p-2 bg-danger mt-3 m-3">
+                    <section class="container p-2 bg-danger mt-3 m-3">
                         <div class="row mt-3">
 
                             <div class="row mt-3">
@@ -41,23 +41,26 @@
                                         placeholder="libelle">
                                 </div>
                                 <div class="col-lg-4">
-                                    <input type="date" name="date_rendez_vous" class="form-control" placeholder="date_rendez_vous">
+                                    <input type="date" name="date_rdv" class="form-control" placeholder="date_rdv">
                                 </div>
                                 <div class="col-lg-4">
-                                    <input type="text" name="clients_id" class="form-control" placeholder="clients_id">
+                                    <select class="form-control" style="width: 100%" name="clients_id">
+                                        <option>Selectionner client</option>;
+
+                                        @foreach ($clients as  $cli )
+                                        <option value="{{  $cli->id }}">{{  $cli->nom_prenom }}</option>;
+
+                                        @endforeach
                                 </div>
                             </div>
 
 
-
-
-                            <div class="row m-3">
                                 <div class="col-6">
                                     <div class="col-auto">
                                         <button type="submit" class="btn btn-dark text-light mb-2">Ajouter</button>
                                     </div>
                                 </div>
-                            </div>
+
                     </section>
                 </form>
             </div>

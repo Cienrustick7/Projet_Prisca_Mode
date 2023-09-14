@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\CouturesController;
+use App\Http\Controllers\DepensesController;
 use App\Http\Controllers\MesuresController;
 use App\Http\Controllers\ModelesController;
 use App\Http\Controllers\PagesController;
@@ -28,54 +29,36 @@ Route::get('/', [PagesController::class,'index']);
 
 
 Route::get('liste_des_clients', [ClientsController::class,'clients'])->name('clients');
-
 Route::get('formulaire_client', [ClientsController::class,'form_client'])->name('form_client');
-
 Route::post('ajouter_clients', [ClientsController::class,'store'])->name('store_client');
 
 Route::get('Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
-
 Route::get('ajout_modele', [ModelesController::class,'form_modele'])->name('form_modele');
-
 Route::post('enregistrement_modele', [ModelesController::class,'ajouter_modele'])->name('ajouter_modele');
 
 Route::get('liste_des_mesures', [MesuresController::class,'mesures'])->name('mesures');
-
 Route::get('formulaire-mesure', [MesuresController::class,'form_mesure'])->name('form_mesure');
-
 Route::post('ajouter_mesure', [MesuresController::class,'store'])->name('store_mesure');
 
 Route::get('liste_des_coutures', [CouturesController::class,'coutures'])->name('coutures');
-
 Route::get('formulaire-couture', [CouturesController::class,'form_couture'])->name('form_couture');
-
 Route::post('ajouter_couture', [CouturesController::class,'store'])->name('store_couture');
 
 Route::get('liste_paiements', [PaiementsController::class,'paiements'])->name('paiements');
-
 Route::get('formulaire_paiment', [PaiementsController::class,'form_paiement'])->name('form_paiement');
+Route::post('ajouter_paiement', [PaiementsController::class,'store'])->name('store_paiement');
 
-Route::post('ajouter_paiement', [PaiementsController::class,'restore'])->name('store_paiement');
+Route::get('formulaire_personnel', [PersonnelsController::class,'form_personnel'])->name('form_personnel');
+Route::post('ajouter_personnel', [PersonnelsController::class,'store'])->name('store_personnel');
+Route::get('liste_personnels', [PersonnelsController::class,'personnels'])->name('personnels');
 
-Route::get('ajout_personnel', [PersonnelsController::class,'form_personnel'])->name('form_personnel');
+Route::get('liste_rendez_vous', [Rendez_vouscontroller::class,'rendez_vous'])->name('rendez_vous');
+Route::get('formulaire_rendez_vous', [Rendez_vousController::class,'form_rendez_vous'])->name('form_rendez_vous');
+Route::post('ajouter_rv', [Rendez_vousController::class,'store'])->name('store_rendez_vous');
 
-Route::post('enregistrement_personnel', [PersonnelsController::class,'ajouter_personnel']);
-
-Route::get('personnels', [PersonnelsController::class,'personnels'])->name('personnels');
-
-Route::get('rendez_vous', [Rendez_vouscontroller::class,'rendez_vous'])->name('rendez_vous');
-
-Route::get('rv.ajout_rendez_vous', [Rendez_vousController::class,'form_rendez_vous'])->name('form_rendez_vous');
-
-Route::post('ajouter_traitement', [Rendez_vousController::class,'ajouter_rendez_vous_traitement']);
-
-
-
-Route::controller(PaiementsController::class)->group(function () {
-
-    Route::get('coutures/{libelle}/paiements', 'index')->name('paiements.coutures');
-});
-
+Route::get('liste_depense', [DepensesController::class,'depenses'])->name('depenses');
+Route::get('formulaie_depense', [DepensesController::class,'form_depense'])->name('form_depense');
+Route::post('ajouter_depense', [DepensesController::class,'store'])->name('store_depense');
 
 
 Route::get('/dashboard', function () {

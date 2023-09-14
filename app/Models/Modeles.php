@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use App\Models\Coutures;
 
 class Modeles extends Model
 {
@@ -16,13 +17,7 @@ class Modeles extends Model
         'image',
         ];
 
-        public function mesures(): HasMany
-{
-    return $this->hasMany(Mesures::class);
-}
-
-public function coutures(): HasMany
-{
-    return $this->hasMany(Coutures::class);
-}
+        function Couture(){
+            return $this->hasOne(Couture::class);
+           }
 }

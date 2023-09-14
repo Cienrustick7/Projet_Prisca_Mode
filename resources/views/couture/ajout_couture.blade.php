@@ -26,6 +26,7 @@
              <hr>
                <form action="{{route('store_couture')}}" method="POST" class="form-group">
                 @csrf
+                <input type="text" name="users_id" class="form-control" value="{{Auth::User()->id}}" hidden>
                 <section class="contenair p-2 bg-danger mt-3 m-3">
                     <div class="row mt-3">
 

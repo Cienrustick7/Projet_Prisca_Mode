@@ -9,31 +9,31 @@
     <section class="container-fluid">
         <div class="row">
           @include('layouts.navbar')
-          
+
           <div class="col-lg-10">
           <div class="container mt-3">
-              <a href="{{ route('form_paiement') }}" class="btn btn-danger">Nouveau+</a>
+              <a href="{{ route('form_depense') }}" class="btn btn-danger">Nouveau+</a>
           </div>
 
           <table class="table mt-3">
             <thead>
               <tr>
                 <th scope="col">id</th>
-                <th scope="col">montant_payer</th>
-                <th scope="col">avance</th>
-                <th scope="col">reste</th>
                 <th scope="col">libelle</th>
+                <th scope="col">montant</th>
+                <th scope="col">date</th>
+                <th scope="col">nom_personnel</th>
 
               </tr>
             </thead>
 
-            @foreach ($paiements as $paiem )
+            @foreach ($depenses as $dep )
             <tr>
-                <td>{{ $paiem->id}}</td>
-                <td>{{ $paiem->montant_payer}}</td>
-                <td>{{ $paiem->avance}}</td>
-                <td>{{ $paiem->reste}}</td>
-                <td>{{ $paiem->Couture->libelle}}</td>
+                <td>{{ $dep->id}}</td>
+                <td>{{ $dep->libelle}}</td>
+                <td>{{ $dep->montant}}</td>
+                <td>{{ $dep->date}}</td>
+                <td>{{ $dep->Personnel->nom_prenom}}</td>
             </tr>
          @endforeach
           </table>

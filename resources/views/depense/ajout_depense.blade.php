@@ -22,17 +22,11 @@
      </div>
       @endif
 
-      <div class="container mt-3">
-        <a href="{{ Route('paiements') }}" class="btn btn-danger">Liste</a>
-    </div>
-    <div>
-        <h1 class="text-center">FORMULAIRE PAIEMENTS</h1>
-    </div>
-
+    <h1 class="text-center">FORMULAIRE DEPENSES</h1>
     <hr>
     <div class="container p-2 bg-danger m-1">
 
-        <form action="{{ route('store_paiement') }}" method="POST" class="form-group row g-3">
+        <form action="{{ route('store_depense') }}" method="POST" class="form-group row g-3">
 
             @csrf
 
@@ -41,25 +35,25 @@
 
                         <div class="row mt-3">
                             <div class="col-lg-6">
-                                <input type="text" name="montant_payer" class="form-control"
-                                    placeholder="montant_payer">
+                                <input type="text" name="libelle" class="form-control"
+                                    placeholder="libelle">
                             </div>
                             <div class="col-lg-6">
-                                <input type="text" name="avance" class="form-control" placeholder="avance">
+                                <input type="text" name="montant" class="form-control" placeholder="montant">
                             </div>
                         </div>
 
                         <div class="row mt-4">
                             <div class="col-lg-6">
-                                <input type="text" name="reste" class="form-control" placeholder="reste">
+                                <input type="date" name="date" class="form-control" placeholder="date">
                             </div>
                             <div class="col-lg-6">
 
-                             <select class="form-control" style="width: 100%" name="coutures_id">
-                                <option>Selectionner couture</option>;
+                             <select class="form-control" style="width: 100%" name="personnels_id">
+                                <option>Selectionner personnel</option>;
 
-                                @foreach ($coutures as  $cout )
-                                <option value="{{  $cout->id }}">{{  $cout->libelle }}</option>;
+                                @foreach ($personnels as  $pers )
+                                <option value="{{  $pers->id }}">{{  $pers->nom_prenom }}</option>;
 
                                 @endforeach
 

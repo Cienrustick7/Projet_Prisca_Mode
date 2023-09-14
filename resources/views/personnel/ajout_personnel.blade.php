@@ -14,8 +14,6 @@
         <div class="row">
             @include('layouts.navbar')
 
-
-
             <div class="col-lg-10">
                 @if (session('status'))
                     <div class="alert alert-succès">
@@ -31,7 +29,7 @@
                 </div>
                 <hr>
                 <div class="container p-2 bg-danger ">
-                    <form action="enregistrement_personnel" method="POST" class="row g-3 form-group">
+                    <form action="{{ route('store_personnel') }}" method="POST" class="row g-3 form-group">
                         @csrf
 
                         <section class="contenair p-2 bg-danger mt-3">
