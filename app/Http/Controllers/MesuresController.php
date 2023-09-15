@@ -26,6 +26,7 @@ class MesuresController extends Controller
         return view('mesure.mesures', compact('mesures'));
     }
 
+
     /**
      * Show the form for creating a new resource.
      */
@@ -50,9 +51,9 @@ class MesuresController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function details(mesures $mesures)
     {
-        //
+       return view('mesure.details', compact('mesures'));
     }
 
     /**

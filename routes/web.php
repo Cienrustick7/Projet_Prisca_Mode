@@ -39,6 +39,7 @@ Route::post('ajouter_modele', [ModelesController::class,'store'])->name('store_m
 Route::get('liste_des_mesures', [MesuresController::class,'mesures'])->name('mesures');
 Route::get('formulaire-mesure', [MesuresController::class,'form_mesure'])->name('form_mesure');
 Route::post('ajouter_mesure', [MesuresController::class,'store'])->name('store_mesure');
+Route::get('mesures.detail', [MesuresController::class,'mesures.details'])->name('mesures.details');
 
 Route::get('liste_des_coutures', [CouturesController::class,'coutures'])->name('coutures');
 Route::get('formulaire-couture', [CouturesController::class,'form_couture'])->name('form_couture');

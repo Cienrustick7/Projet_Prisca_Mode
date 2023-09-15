@@ -22,8 +22,8 @@
             <thead>
               <tr>
                 <th>N° enregistrement</th>
-                <th>Nom_client</th>
                 <th>Nom_modele</th>
+                <th>Nom_client</th>
                 <th>Details</th>
               </tr>
 
@@ -35,9 +35,12 @@
                 <td>{{ $mes->Client->nom_prenom}}</td>
 
                 <td>
-                <a href="">
-                    <i class="fa fa-eye" title="détaille"></i>
-                </a>
+                 <form action="" method="POST">
+                    <a class="btn btn-info" href="{{ route('mesures.details') }}">
+                       details
+                    </a>
+                 </form>
+
             </td>
            </tr>
             @endforeach
