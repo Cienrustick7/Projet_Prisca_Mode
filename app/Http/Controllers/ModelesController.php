@@ -36,7 +36,7 @@ class ModelesController extends Controller
      /**
      * Store a newly created resource in storage.
      */
-    public function ajouter_modele(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'type_modele' => 'required',

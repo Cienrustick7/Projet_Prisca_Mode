@@ -32,9 +32,9 @@ Route::get('liste_des_clients', [ClientsController::class,'clients'])->name('cli
 Route::get('formulaire_client', [ClientsController::class,'form_client'])->name('form_client');
 Route::post('ajouter_clients', [ClientsController::class,'store'])->name('store_client');
 
-Route::get('Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
-Route::get('ajout_modele', [ModelesController::class,'form_modele'])->name('form_modele');
-Route::post('enregistrement_modele', [ModelesController::class,'ajouter_modele'])->name('ajouter_modele');
+Route::get('liste_Modeles', [ModelesController::class,'Modeles'])->name('Modeles');
+Route::get('formulaire_modele', [ModelesController::class,'form_modele'])->name('form_modele');
+Route::post('ajouter_modele', [ModelesController::class,'store'])->name('store_modele');
 
 Route::get('liste_des_mesures', [MesuresController::class,'mesures'])->name('mesures');
 Route::get('formulaire-mesure', [MesuresController::class,'form_mesure'])->name('form_mesure');

@@ -70,8 +70,6 @@
 
                                     </div>
                                 </div>
-
-
                                 <div class="row m-3">
                                     <div class="col-6">
                                         <div class="col-auto">

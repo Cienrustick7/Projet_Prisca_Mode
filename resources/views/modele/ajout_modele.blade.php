@@ -28,7 +28,7 @@
 
                 <div class="container p-2 bg-danger m-1">
 
-                    <form action="enregistrement_modele" method="POST" class="row g-3 form-group" enctype="multipart/form-data">
+                    <form action="{{ route('store_modele') }}" method="POST" class="row g-3 form-group" enctype="multipart/form-data">
                         @csrf
                         <section class="contenair p-2 bg-danger mt-3 m-3">
                             <div class="row mt-3">
@@ -38,7 +38,7 @@
                                         <input type="text" name="type_modele" class="form-control"
                                             placeholder="type_modele">
                                         </div>
-                                        
+
                                         <div class="col-lg-6">
                                             <input type="text" name="nom_modele" class="form-control" placeholder="nom_modele">
                                         </div>
